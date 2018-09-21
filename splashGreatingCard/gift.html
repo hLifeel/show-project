@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="images/style.css"/>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+    <script type="text/javascript" src="js/turnCanvas.js"></script>
+</head>
+<body>
+<section id="out_holder" class="out_holder gift_hodler">
+    <img src="images/curtain2.png" alt="" class="curtain2">
+    <section id="dropCanvas"></section>
+
+    <div class="thx_txt">
+        <div class="title">Dear&nbsp;&nbsp;<span id="client_name">CC</span></div>
+        <p>感谢您一年以来对我们的支持与陪伴，在这新春佳节之际，祝您新春快乐，身体健康，万事如意。</p>
+    </div>
+    <div class="red_packet">
+        <canvas width="230" height="298" id="packet_profile"></canvas>
+        <a href="result.html"><img src="images/red_packet.png" class="close_packet" id="close_pocket"></a>
+        <div class="pocket_tip">点击红包</div>
+    </div>
+
+    <div class="bgCircle">
+        <canvas id="bg_canvas" width="750" height="750"></canvas>
+    </div>
+    <div class="turntable">
+        <canvas id="turntableCanvas" width="750" height="750"></canvas>
+    </div>
+
+    <img src="images/white_gesture.png" alt="" class="ANgesture onTurn">
+</section>
+
+<section id="cover_lay" class="cover_lay">
+    <div id="tip_pop" class="tip_pop">
+        <div>滑动屏幕选择您喜欢的狗狗<br>并点击红包</div>
+        <img src="images/white_gesture.png" alt="" class="ANgesture">
+    </div>
+</section>
+<script type="text/javascript" src="js/drop.js"></script>
+</body>
+</html>

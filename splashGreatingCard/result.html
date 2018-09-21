@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="images/style.css" />
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/func.js"></script>
+
+</head>
+<body>
+	<section id="result_out_holder" class="out_holder result_out_holder">
+		<img src="images/curtain2.png" alt="" class="curtain">
+		<section id="dropCanvas"></section>
+
+		<div id="result" class="result">
+			<img src="images/open_envelope.png" alt="" class="open_envelope">
+			<div id="noneGift" class="noneGift">
+				<div class="result_title">很遗憾</div>
+				<div class="none_result_info">
+					您的狗狗忘记给你带礼物了，只留下“新年快乐，狗年大吉！”的祝福。
+				</div>
+			</div>
+
+			<div id="winGift" class="winGift" style="display: none;">
+				<div class="result_title">恭喜您，获得了新春好礼</div>
+				<div class="result_info">
+					星巴克100元星礼卡<br>
+					卡号：<span id="card_num">1234 1234 1234 1234</span><br>
+					密码：<span id="card_password">123456</span>
+				</div>
+				<div class="use_guide">* 请绑定星巴克APP使用&nbsp;<span id="guide_show">如何绑定</span></div>
+			</div>
+
+			<div></div>
+		</div>
+
+		<div id="result_footer">
+			<img src="images/turntable_dog_profile4.png" alt="" class="pop_img pop_img1">
+			<img src="images/turntable_dog_profile3.png" alt="" class="pop_img pop_img2">
+			<img src="images/turntable_dog_profile1.png" alt="" class="pop_img pop_img3">
+			<img src="images/turntable_dog_profile5.png" alt="" class="pop_img pop_img4">
+			<img src="images/turntable_dog_profile2.png" alt="" class="pop_img pop_img5">
+
+			<img src="images/fotter.jpg" alt="" class="footer_img">
+		</div>
+	</section>
+
+    <section id="result_cover_lay" class="cover_lay">
+		<div class="guide_pop tip_pop">
+			<div class="step_guide">
+				第 1 步：下载“<span class="Starbucks_color">星巴克</span>”APP<br>
+				第 2 步：打开APP，选择底部菜单“<span class="Starbucks_color">星礼卡</span>”<br>
+				第 3 步：选择“<span class="Starbucks_color">我的星礼卡</span>”<br>
+				第 4 步：输入卡号和密码
+			</div>
+			<img src="images/screenshot.png" class="screenshot" alt="">
+
+			<img src="images/pop_close.png" class="close_pop" id="close_pop" alt="">
+		</div>
+    </section>
+	<script type="text/javascript" src="js/drop.js"></script>
+</body>
+</html>
