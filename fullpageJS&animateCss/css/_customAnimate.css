@@ -1,0 +1,163 @@
+#layout {
+  animation-fill-mode: forwards;
+}
+.detail_section {
+  animation-fill-mode: forwards;
+}
+/*section1*/
+#section1-animate1_fadeIn {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+#section1-animate2_fadeInDown {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+#section1-animate3_bounceIn {
+  animation-duration: 0.8s;
+  animation-delay: 1s;
+}
+#section1-animate4_bounceInRight {
+  animation-duration: 1s;
+  animation-delay: 1.4s;
+}
+#section1-animate5_bounceInRight {
+  animation-duration: 1s;
+  animation-delay: 1.7s;
+}
+#section1-animate6_bounceInRight {
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+#section1-animate7_bounceInRight {
+  animation-duration: 1s;
+  animation-delay: 2.3s;
+}
+/*section2*/
+#section2-animate1_fadeInLeft,
+#section2-animate3_fadeInRight {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+#section2-animate2_fadeInUp,
+#section2-animate4_fadeInUp {
+  animation-duration: 1s;
+  animation-delay: 1.3s;
+}
+/*section3*/
+#section3-animate1_bounceInUp {
+  animation-duration: 1s;
+  animation-delay: 0s;
+}
+#section3-animate2_bounceInUp {
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+}
+#section3-animate3_bounceInUp {
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+}
+#section3-animate4_bounceInUp {
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+}
+#section3-animate5_fadeInUp {
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+}
+/*detail_section1*/
+#list1-animate1_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+}
+#list1-animate2_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
+}
+#list1-animate3_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+}
+#list1-animate4_zoomIn {
+  animation-duration: 0.5ss;
+  animation-delay: 0.3s;
+}
+#list1-animate5_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+}
+#list1-animate6_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+}
+/*detail_section2*/
+#list2-animate1_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+}
+#list2-animate2_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
+}
+#list2-animate3_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+}
+#list2-animate4_zoomIn {
+  animation-duration: 0.5ss;
+  animation-delay: 0.3s;
+}
+#list2-animate5_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+}
+#list2-animate6_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+}
+#list2-animate7_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.6s;
+}
+#list2-animate8_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.7s;
+}
+/*detail_section3*/
+#list3-animate1_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+}
+#list3-animate2_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.1s;
+}
+#list3-animate3_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+}
+#list3-animate4_zoomIn {
+  animation-duration: 0.5ss;
+  animation-delay: 0.3s;
+}
+#list3-animate5_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.4s;
+}
+#list3-animate6_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+}
+#list3-animate7_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.6s;
+}
+#list3-animate8_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.7s;
+}
+#list3-animate9_zoomIn {
+  animation-duration: 0.5s;
+  animation-delay: 0.8s;
+}
+/*# sourceMappingURL=_customAnimate.css.map */

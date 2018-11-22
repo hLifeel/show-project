@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>汇丰信用卡优惠</title>
+    <meta name="description" content="汇丰公司雇员专享计划，额外信用卡礼遇。">
+
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/global.css?201811024">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        function set_size() {
+            $("html").css({"font-size": $(window).width() >= 750 ? 24 : ($(window).width() / 750 * 24)})
+        }
+
+        $(function () {
+            set_size();
+
+            $('.tabBtn').click(function(){
+                var index=$(this).index();
+                $('.tabBtn').removeClass('isSelected');
+                $(this).addClass('isSelected');
+
+                $(this).parents('.card_area').siblings('.cardContent').hide().eq(index).show();
+
+                if (index==1){
+                    var animaArr = $('.welfare_list .animated');
+                    for (var i = 0; i < animaArr.length; i++) {
+                        var _animaName = animaArr[i].id;
+                        var animaName = _animaName.split("_")[1];
+                        $(animaArr[i]).addClass(animaName);
+                    }
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="detail_section detail_section2">
+    <div class="card_area">
+        <img src="images/premire_cardface.png" class="card_face" alt="">
+        <div class="card_title">汇丰旅行信用卡</div>
+        <ul class="welfareTab">
+            <li class="isSelected tabBtn">开卡礼</li>
+            <li class="tabBtn">主要权益</li>
+        </ul>
+    </div>
+    <div class="cardContent" style="display: block;">
+        <div class="cardWelfare">
+            <img src="images/card_gift.png" alt="">刷卡好礼
+        </div>
+        <p class="detailIntro">
+            2018年10月01日-2018年12月31日期间申请汇丰旅行信用卡，卡片获批后60天内激活并在此60天内期限内消费<span class="hsbcRed">满3笔</span>，且每笔可计积分消费金额满等值人民币<span class="hsbcRed">588元（含）</span>，即可在满足活动条件后2个月内通过汇丰中国权益平台“荟·赏掌中世界”领取:
+        </p>
+        <img src="images/premire_card_gift1.png" class="card_gift" alt="">
+        <div class="dash_bar">
+            <span>或</span>
+        </div>
+        <p class="detailIntro">
+            2018年10月01日-2018年12月31日期间申请汇丰旅行信用卡，卡片获批后60天内激活并在此60天内期限内消费<span class="hsbcRed">满9笔</span>，且每笔可计积分消费金额满等值人民币<span class="hsbcRed">588元（含）</span>，即可在满足活动条件后2个月内通过汇丰中国权益平台“荟·赏掌中世界”领取:
+        </p>
+        <img src="images/premire_card_gift2.png" class="card_gift" alt="">
+    </div>
+    <div class="cardContent">
+        <ul class="welfare_list">
+            <li class="animated" id="list2-animate1_zoomIn">
+                <img src="images/premirecard_w1.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    五星及高端<br>
+                    酒店住宿礼遇
+                </div>
+            </li>
+            <li class="animated" id="list2-animate2_zoomIn">
+                <img src="images/premirecard_w2.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    高额平安<br>
+                    人身保障
+                </div>
+            </li>
+            <li class="animated" id="list2-animate3_zoomIn">
+                <img src="images/premirecard_w3.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    尊享12积分<br>
+                    兑换1航空里程
+                </div>
+            </li>
+            <li class="animated" id="list2-animate4_zoomIn">
+                <img src="images/premirecard_w4.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    9元约“汇”<br>
+                    看电影
+                </div>
+            </li>
+            <li class="animated" id="list2-animate5_zoomIn">
+                <img src="images/premirecard_w5.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    每年8次机场/高铁<br>
+                    贵宾厅服务
+                </div>
+            </li>
+            <li class="animated" id="list2-animate6_zoomIn">
+                <img src="images/premirecard_w6.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    五星酒店自助餐<br>
+                    买一赠一
+                </div>
+            </li>
+            <li class="animated" id="list2-animate7_zoomIn">
+                <img src="images/premirecard_w7.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    航班延误<br>
+                    3小时最高<br>
+                    赔付1000元
+                </div>
+            </li>
+            <li class="animated" id="list2-animate8_zoomIn">
+                <img src="images/premirecard_w8.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    每年最高5000元<br>
+                    航空延误<br>
+                    无障碍赔付
+                </div>
+            </li>
+        </ul>
+        <div class="clearBoth"></div>
+    </div>
+
+    <div class="backArea">
+        <a href="index.html#section3" class="backBtn">&lt;&lt;返回</a>
+    </div>
+</div>
+
+</body>
+</html>
