@@ -1,0 +1,108 @@
+#layout{width: 100%; max-width: 640px; margin: 0 auto;}
+*{margin: 0; padding: 0;}
+body{font-family: Microsoft YaHei, Arial, sans-serif;}
+img{display: block; border: none; width: 100%;}
+.boldFont{font-weight: bold;}
+.page_intro{padding-top: 1.5rem;}
+.centerContent{width: 94%; margin: 0 auto;}
+.intro_td{width: 68%; padding-right: 2%;}
+.intro_td .intro_txt{font-size: 1rem; color: #313131;}
+.intro_code span{font-size: 0.8rem; color: #666; display: block; text-align: center; margin-top: 0.8rem;}
+.txtLink{color: #fff; text-decoration: underline; display: inline-block; background: #bfa253; padding: 0.1rem 0.3rem; margin: 0 0.1rem;}
+
+.slideArea{background: #f3f3f3; padding: 1.4rem 0; margin-top: 2rem;}
+.slideTitle{font-size: 1.7rem; color: #bfa253; text-align: center;}
+.slideTitle .titleIcon{width: 4rem; margin: 0 auto;}
+.slideTitle .titleTxt{display: inline-block; padding: 1rem 0;}
+
+.swiper-container{margin-top: 0.8rem;}
+.eventSlide{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.7rem;
+    padding-bottom: 6.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.shSlide{background: #fff url("../images/forum_bg_sh.png") no-repeat bottom center; background-size: auto;}
+.gzSlide{background: #fff url("../images/forum_bg_gz.png") no-repeat bottom center; background-size: auto;}
+.szSlide{background: #fff url("../images/forum_bg_sz.png") no-repeat bottom center; background-size: auto;}
+.cdSlide{background: #fff url("../images/forum_bg_cd.png") no-repeat bottom center; background-size: auto;}
+.hzSlide{background: #fff url("../images/forum_bg_hz.png") no-repeat bottom center; background-size: auto;}
+.bjSlide{background: #fff url("../images/forum_bg_bj.png") no-repeat bottom center; background-size: auto;}
+
+.eventSlide .eventTitle{color: #000; font-weight: bold; padding-bottom: 0.6rem; border-bottom: dashed 1px #ccc;}
+.eventSlide .eventTime{margin-top: 0.6rem; color: #313131; line-height: 140%;}
+.eventSlide .eventTime span{color: #bfa253;}
+.swiper-button-next, .swiper-button-prev{
+    width: 2.8rem;
+    height: auto;
+    background: rgba(0,0,0,0.4);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    margin-top: unset;
+    outline: none;
+    border: none;
+}
+.swiper-button-prev{left: 0;}
+.swiper-button-next{right: 0;}
+.eventSlide .liveAvator{margin-bottom: 0.7rem;}
+.liveSlide{padding-bottom: 0.7rem; background: #fff;}
+.slideTips{margin-top: 1.4rem; color: #313131;}
+.slideTips .tip_code{width: 20%; margin: 1.2rem auto; margin-bottom: 0;}
+.protocolArea{padding: 2rem 0; line-height: 140%; color: #313131; font-size: 0.8rem;}
+
+.popup{position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 999; background: rgba(0,0,0,0.4); font-size: 1rem; display: none;}
+.popupContent{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 480px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    padding: 1.5rem;
+    border: solid 2px #bfa253;
+    background-size: auto;
+    border-radius: 10px;
+    background: #fff;
+}
+.popupContent .closePopup{position: absolute; width: 1rem; top: 1rem; right: 1rem; cursor: pointer;}
+.popupContent .popupEvent{font-weight: bold; font-size: 1.2rem; text-align: center;}
+.popupContent .popupEventTitle{margin-top: 1rem;}
+.popupContent .eventShortInfo{font-weight: bold;}
+.popupContent .eventShortInfo span{font-weight: normal; color: #313131;}
+.popupContent .popupEventContent{margin-top: 1rem; font-weight: bold; color: #bfa253;}
+.popupContent .popupEventContent ul li{margin-left: 4.5%; line-height: 140%;}
+.popupContent .popupEventContent ul li span{font-weight: normal; color: #313131}
+.popupContent .popupEventContent p{font-weight: normal; color: #313131}
+.popupReserve{display: block; width: 40%; padding: 0.8rem; font-weight: bold; color: #fff; text-decoration: none; background: #bfa253; text-align: center; margin: 0 auto; margin-top: 1.5rem}
+
+.popupContent .livePopupAvator_td{width: 35%; padding-right: 3%;}
+.popupContent .popupLive{font-weight: bold; font-size: 1.2rem;}
+.popupContent .popupLiveitle{margin-top: 1rem;}
+.popupContent .liveShortInfo{font-weight: bold;}
+.popupContent .liveShortInfo span{font-weight: normal; color: #313131;}
+.popupContent .popupLiveDescription{margin-top: 1rem; font-weight: bold; color: #bfa253;}
+.popupContent .popupLiveDescription ul{ display: none;}
+.popupContent .popupLiveDescription ul li{margin-left: 4.5%; line-height: 140%;}
+.popupContent .popupLiveDescription ul li span{font-weight: normal; color: #313131}
+.popupContent .popupLiveDescription p{font-weight: normal; color: #313131;}
+.popupContent .popupLiveContent{margin-top: 1rem; font-weight: bold; color: #bfa253;}
+.popupContent .popupLiveContent p{font-weight: normal; color: #313131}
+#livePopup .popupReserve{width: 50%;}
+
+@media screen and (max-width: 640px){
+    .swiper-button-next, .swiper-button-prev{width: 3.3rem;}
+    .popupContent .closePopup{width: 1.1rem;}
+    .slideTips .tip_code{width: 28%;}
+}

@@ -1,0 +1,265 @@
+@import "_basic.less";
+@import "_customAnimate.less";
+
+img{display: block; border: none;}
+body{
+  font-family: lightHSBC, Microsoft YaHei, arial;
+  position: relative;
+}
+.hsbcRed{color: #db0011;}
+.clearBoth{clear: both !important;}
+.visibleHide{opacity: 0;}
+.setBg{
+  background: url('@{imgPath}bg.jpg') no-repeat top center;
+  background-size: cover;
+}
+
+.layout{
+  .section{
+    .align_center{
+      .box_set;
+      width: 86.4%;
+      height: 100%;
+      overflow: auto;
+      margin: 0 auto;
+      position: relative;
+    }
+  }
+  .section1{
+    .logo_hsbc{
+      width: 100%;
+      padding: 1.6rem 0;
+    }
+    .campaign_title{
+      .hsbcRed;
+      font-size: 2.4rem;
+      margin-top: 5rem;
+    }
+    .opening_welfare{
+      width: 100%;
+      margin: 3rem 0;
+    }
+    .card_display{
+      overflow: hidden;
+      .specific_card{
+        width: 5rem;
+        margin-right: 0.7rem;
+        float: left;
+      }
+    }
+  }
+  .section2{
+    .align_center{
+      width: 88.5%;
+    }
+    .welfare_intro{
+      .intro_logo{
+        position: relative;
+        margin-top: 1.2rem;
+        .intro_logo_img{
+          position: absolute;
+          left: 50%; top:0;
+          width: 4rem; margin-left: -2rem;
+        }
+        .valign_dash{
+          width: 39%;  height: 2rem;
+          border-bottom: solid 1px #000;
+        }
+        .left_dash{float: left;}
+        .right_dash{float: right;}
+      }
+      .intro_text_wrapper{
+        .box_set;
+        width: 100%;
+        padding: 0.85rem;
+        padding-top: 2rem;
+        border: solid 1px #000; border-top: none;
+        .intro_title{
+          font-size: 1rem;
+          text-align: center;
+          padding: 0.6rem 0;
+          font-weight: bold;
+        }
+        .intro_text{
+          font-size: 0.9rem;
+          color: #333;
+          .inside_clock{
+            display: inline-block;
+            width: 0.9rem; margin-right: 0.2rem;
+            vertical-align: text-top;
+          }
+        }
+      }
+    }
+    .welfare_tips{
+      font-size: 0.8rem; color: #767676;
+      margin-top: 0.3rem;
+    }
+  }
+  .section3{
+    .card_catalogue{
+      .box_set; width: 98%;
+      margin: 0 auto;
+      margin-top: 1.6rem;
+      padding: 1.7rem 1.1rem;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+      .card_face{
+        width: 14rem;
+      }
+      .card_name{
+        color: #010101;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        .right_arrow{
+          display: inline-block; width: 0.8rem;
+          vertical-align: text-top;
+        }
+      }
+    }
+    .cardface_tips{
+      font-size: 0.8rem;
+      color: #767676;
+      margin-top: 1.9rem;
+    }
+  }
+}
+.detail_section{
+  .setBg;
+  .box_set; padding-top: 1.5rem;
+  width: 100%;
+  .card_area{
+    margin-top: 1rem;
+    text-align: center;
+    .card_face{
+      width: 14rem;
+      display: inline-block;
+    }
+    .card_title{
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    .welfareTab{
+      width: 18rem;
+      overflow: hidden;
+      display: inline-block;
+      .tabBtn{
+        .box_set; width: 50%;
+        float: left;
+        border: solid 1px #db0011;
+        .hsbcRed;
+        background: #fff;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+      }
+      .isSelected{
+        color: #fff;
+        background: #db0011;
+      }
+    }
+    .welfare_only{
+      .box_set;
+      display: inline-block;
+      width: 9rem;
+      border: solid 1px #db0011;
+      color: #fff;
+      background: #db0011;
+      font-size: 1.2rem;
+      padding: 0.5rem 0;
+    }
+  }
+  .cardContent{
+    width: 86.4%;
+    margin: 2rem auto;
+    display: none;
+    .cardWelfare{
+      text-align: center;
+      font-size: 1.2rem;
+      color: #333;
+      margin-bottom: 1rem;
+      img{
+        display: inline-block;
+        width: 1.7rem;
+        margin-right: 0.8rem;
+        vertical-align: top;
+      }
+    }
+    .detailIntro{
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .card_gift{
+      width: 100%;
+      margin-top: 0.8rem;
+    }
+    .dash_bar{
+      text-align: center;
+      height: 0.8rem;
+      line-height: 1.6rem;
+      font-size: 1.2rem;
+      color: #fff;
+      border-bottom: dashed 1px #ccc;
+      margin: 0.8rem 0 1.6rem 0;
+      span{
+        display: inline-block;
+        padding: 0 1.3rem;
+        background: #929292;
+      }
+    }
+
+    .welfare_list{
+      li{
+        float: left;
+        text-align: center;
+        width: 31%;
+        margin-right: 3.5%;
+        height: 11rem;
+        margin-bottom: 0.5rem;
+        .redcard_w{
+          display: inline-block;
+          width: 6rem;
+        }
+        .redcard_title{
+          margin-top: 0.7rem;
+          font-size: 0.9rem;
+          .Homeaway{
+            display: inline-block;
+            width: 6.3rem;
+          }
+        }
+        &:nth-child(3n){
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .backArea{
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    .backBtn{
+      .hsbcRed;
+    }
+  }
+}
+.detail_section4{
+  background: none;
+}
+.page_arrow{
+  position: absolute;
+  width: 3.4rem;
+  left: 50%; bottom: 4.5%;
+  #animation(updown 600ms linear infinite);
+  .keyframe_more(updown,translate3d(-50%,10%,0),translate3d(-50%,0,0),translate3d(-50%,-10%,0),translate3d(-50%,0,0),translate3d(-50%,10%,0))
+}
+.arrowTip{
+  font-size: 0.8rem;
+  .hsbcRed;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 0; bottom: 1.5%;
+}

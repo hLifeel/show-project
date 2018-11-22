@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>汇丰信用卡优惠</title>
+    <meta name="description" content="汇丰公司雇员专享计划，额外信用卡礼遇。">
+
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/global.css?201811024">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        function set_size() {
+            $("html").css({"font-size": $(window).width() >= 750 ? 24 : ($(window).width() / 750 * 24)})
+        }
+
+        $(function () {
+            set_size();
+
+            var animaArr = $('.welfare_list .animated');
+            for (var i = 0; i < animaArr.length; i++) {
+                var _animaName = animaArr[i].id;
+                var animaName = _animaName.split("_")[1];
+                $(animaArr[i]).addClass(animaName);
+            }
+        })
+    </script>
+</head>
+<body class="setBg">
+<div class="detail_section detail_section4">
+    <div class="card_area">
+        <img src="images/purple_cardface.png" class="card_face" alt="">
+        <div class="card_title">汇丰卓越理财信用卡</div>
+        <div class="welfare_only">主要权益</div>
+    </div>
+    <div class="cardContent" style="display: block;">
+        <ul class="welfare_list">
+            <li class="animated" id="list1-animate1_zoomIn">
+                <img src="images/redcard_w1.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    9元约“汇”<br>
+                    看电影
+                </div>
+            </li>
+            <li class="animated" id="list1-animate2_zoomIn">
+                <img src="images/blackcard_w9.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    免收国际交易<br>
+                    接入服务费
+                </div>
+            </li>
+            <li class="animated" id="list1-animate3_zoomIn">
+                <img src="images/redcard_w3.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    网络消费<br>
+                    2倍积分
+                </div>
+            </li>
+            <li class="animated" id="list1-animate4_zoomIn">
+                <img src="images/purplecard_w4.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    全球逾100万<br>
+                    Boingo无线上网<br>
+                    热点免费接入
+                </div>
+            </li>
+            <li class="animated" id="list1-animate5_zoomIn">
+                <img src="images/redcard_w5.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    五星酒店自助餐<br>
+                    买一送一
+                </div>
+            </li>
+            <li class="animated" id="list1-animate6_zoomIn">
+                <img src="images/redcard_w6.png" class="redcard_w" alt="">
+                <div class="redcard_title">
+                    48小时<br>
+                    失卡保障
+                </div>
+            </li>
+        </ul>
+        <div class="clearBoth"></div>
+    </div>
+
+    <div class="backArea">
+        <a href="index.html#section3" class="backBtn">&lt;&lt;返回</a>
+    </div>
+</div>
+
+</body>
+</html>
