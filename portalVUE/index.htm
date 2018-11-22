@@ -1,0 +1,1449 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EMC 大讲堂</title>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var sortIndex=0,
+                sortBtn=$('.nav_tab>a'),
+                sortContent=$('.page2contentbox');
+
+            sortBtn.click(function () {
+                sortIndex=sortBtn.index(this);
+                sortContent.removeClass('isShow').eq(sortIndex).addClass('isShow');
+            });
+        })
+    </script>
+    <style>
+        v-cloak {
+            display: none;
+        }
+
+        .isShow {
+            display: block !important;
+        }
+
+        .nav_tab > a.isShow {
+            border-bottom: 2px solid #0086f5;
+        }
+        .page2contentbox{
+            display: none;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        img {
+            border: none;
+            display: block;
+        }
+
+        ul, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 981px;
+            margin: 0 auto;
+            padding: 20px 0;
+            background: #000;
+            color: #fff;
+            font-family: 'Microsoft YaHei' !important;
+            position: relative;
+        }
+
+        .link_banner {
+            display: block;
+            position: absolute;
+            background: url('images/transparent_bg_gu.png');
+        }
+
+        .hotline {
+            float: right;
+            padding: 10px 0;
+        }
+
+        .summary {
+            padding: 20px 0;
+            font-size: 16px;
+            line-height: 28px;
+        }
+
+        .tabbar {
+            width: 981px;
+            border-top: 1px solid #144272;
+            border-bottom: 1px solid #144272;
+            background: url('images/bar_bg.jpg');
+            margin: 10px 0 20px 0 !important;
+            padding: 0px;
+        }
+
+        .tabbar li {
+            list-style-type: none;
+            float: left;
+            padding: 12px 22px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .tabbar .tabbar-border-img {
+            display: block;
+            float: left;
+            margin-top: 9px;
+        }
+
+        .link_1 {
+            color: #2c95dd;
+            font-size: 18px;
+            line-height: 200%;
+        }
+
+        .meeting_content {
+            width: 981px;
+            overflow: hidden;
+            *position: relative;
+        }
+
+        .meeting_content ul {
+            width: 9999px;
+        }
+
+        .meeting_content ul li {
+            float: left;
+            width: 981px;
+        }
+
+        .contentbox {
+            margin: 10px 0;
+            padding: 20px 0;
+            background: #0b1225;
+        }
+
+        .contentbox_2 {
+            margin: 10px 0;
+            padding: 20px 0;
+            width: 1001px;
+        }
+
+        .leftbox {
+            width: 625px;
+            border: 5px solid #0f1a36;
+            float: left;
+            position: relative;
+        }
+
+        .leftbox_pr {
+            width: 835px;
+            border: 5px solid #0f1a36;
+            float: left;
+            position: relative;
+        }
+
+        .rightbox {
+            padding: 15px 6px;
+            border-right: 1px dashed #666;
+            float: left;
+            cursor: pointer;
+        }
+
+        .rightbox_pr {
+            padding: 15px 6px;
+            border-right: 1px dashed #666;
+            float: left;
+            cursor: pointer;
+        }
+
+        .inner_box {
+            float: left;
+            padding: 10px 20px;
+            width: 415px;
+            font-size: 13px;
+            line-height: 22px;
+        }
+
+        .inner_box2 {
+            float: left;
+            padding: 10px 20px;
+            width: 480px;
+            font-size: 13px;
+            line-height: 22px;
+        }
+
+        .date {
+            color: #2c95dd;
+            border-bottom: 1px dashed #2c95dd;
+            padding: 0 0 10px 0;;
+            font-size: 14px;
+            width: 360px;
+        }
+
+        .title {
+            font-size: 14px;
+            padding: 10px 0;
+        }
+
+        .enter {
+            display: block;
+            color: #2c95dd;
+            background: #0f1a36;
+            font-size: 13px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            padding: 8px;
+        }
+
+        .but {
+            width: 406px;
+            margin: 25px auto;
+        }
+
+        .but img {
+            float: left;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        .wechatbox {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .wechatbox img {
+            float: left;
+            margin-right: 20px;
+        }
+
+        .nav_tab a {
+            display: block;
+            padding: 8px 5px;
+            color: #fff !important;
+            font-size: 14px;
+            float: left;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .left {
+            padding-right: 20px;
+        }
+
+        .right {
+            float: left;
+        }
+
+        .top3_content {
+            padding-top: 20px;
+        }
+
+        .right a, .top3_content a {
+            color: #fff !important;
+            font-weight: bold;
+            vertical-align: bottom;
+            margin: 0 2px;
+            font-size: 13px;
+        }
+
+        .right img, .top3_content img {
+            display: inline;
+            margin-right: 10px;
+            vertical-align: bottom;
+        }
+
+        #top3_content_a {
+            display: block;
+            width: 120px;
+            padding: 4px 5px;
+            color: #fff;
+            border: 3px solid #2c95dd;
+            font-size: 12px;
+            font-weight: bold;
+            float: right;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .intr_box {
+            color: #fff;
+            font-size: 12px;
+            line-height: 22px;
+            background: #2c95dd;
+            width: 390px;
+            padding: 10px;
+        }
+
+        .close {
+            display: block;
+            float: right;
+        }
+
+        .tab3_gu {
+            padding: 10px 20px;
+        }
+
+        .tab3_nav_gu {
+            border-bottom: 1px solid #fff;
+            padding-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .tab3_video_outer {
+            padding-bottom: 40px;
+        }
+
+        .tab3_video_outer li {
+            padding-top: 20px;
+            font-size: 16px;
+        }
+
+        .video_btn_1 {
+            display: block;
+            margin-top: 15px;
+        }
+
+        .video_btn_2 {
+            display: block;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+
+        .tab3_video_img_outer_1 {
+            width: 198px;
+            height: 124px;
+            float: left;
+            position: relative;
+        }
+
+        .tab3_video_layer {
+            display: none;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .tab3_icon_gu {
+            display: block;
+            margin: 45px auto;
+        }
+
+        .tab3_video_outer .left_gu {
+            cursor: pointer;
+        }
+
+        .tab3_video_outer .right_gu {
+            float: right;
+            width: 685px;
+            line-height: 28px;
+        }
+
+        .video_box_outer_gu .title_gu, .top5_box_outer_gu .title_gu {
+            font-size: 24px;
+            border-bottom: 2px solid #3496db;
+            font-weight: bold;
+            line-height: 60px;
+        }
+
+        .top5_main_outer {
+            padding: 24px 0 30px;
+        }
+
+        .top5_video_list {
+            width: 190px;
+            float: left;
+            margin-right: 7px;
+        }
+
+        .video_length_box {
+            background: rgba(0, 0, 0, 0.7);
+            width: 80px;
+            text-align: center !important;
+            padding: 2px 0;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 8px;
+            right: 9px;
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .top5_video_img_outer {
+            width: 190px;
+            height: 128px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .top5_video_img_outer .top5_video_layer {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .top5_video_layer img {
+            display: block;
+            margin: 45px auto 0;
+        }
+
+        .top5_video_img {
+            display: block;
+        }
+
+        .top5_icon_gu {
+            display: block;
+            position: absolute;
+            top: 6px;
+            left: 8px;
+        }
+
+        .top5_video_info_outer {
+            padding-top: 12px;
+        }
+
+        .top5_video_info_outer .top5_video_title {
+            color: #0088cb;
+            padding-bottom: 6px;
+            height: 73px;
+            font-size: 16px !important;
+        }
+
+        .top5_video_info_outer .top5_video_desc {
+            font-size: 12px;
+            color: #fff;
+        }
+
+        .video_main_outer {
+            padding: 30px 0;
+        }
+
+        .video_main_outer .left_gu {
+            width: 525px;
+            float: left;
+            line-height: 28px;
+            font-size: 16px;
+        }
+
+        .video_main_outer .right_gu {
+            float: right;
+        }
+
+        .video_main_date {
+            color: #ccc;
+            font-size: 13px;
+        }
+
+        .video_intr_text {
+            font-size: 13px;
+        }
+
+        .main_video_box, .short_video_outer_box {
+            background: #000;
+            color: #fff;
+            width: 700px;
+            height: 610px;
+            padding: 10px;
+            display: none;
+            position: fixed;
+            border: 5px solid #003F84;
+            display: none;
+        }
+
+        .video_box_wrap {
+            height: 580px;
+            overflow: auto;
+        }
+
+        .main_video_box .title_gu, .short_video_outer_box .title_gu {
+            display: inline-block;
+            border-bottom: 4px solid #3496db;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+
+        .video_summary_gu {
+            line-height: 26px;
+            margin-top: 30px;
+        }
+
+        .video_box_btn_img {
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 10px;
+        }
+
+        #main_video_1 {
+            margin: 15px auto;
+        }
+
+        .main_video_img, .tab3_video_img, .tab3_video_btn {
+            cursor: pointer;
+        }
+
+        .video_boxfancy_close_btn {
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            right: -15px;
+            top: -15px;
+        }
+
+        .pop_outer_gu {
+            display: none;
+            position: fixed;
+            width: 450px;
+            padding: 10px;
+            border: 5px solid #003F84;
+            background: #000;
+            z-index: 10;
+        }
+
+        .video_boxfancy_close_btn_2 {
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            right: -15px;
+            top: -15px;
+            z-index: 11;
+        }
+
+        .fixed_chen:after {
+            content: '.';
+            display: block;
+            height: 0;
+            clear: both;
+            font-size: 0;
+        }
+
+        .fixed_chen {
+            *zoom: 1;
+        }
+
+        .solution_description_box {
+            background: #0b1225;
+            padding: 20px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .solution_icon {
+            display: block;
+        }
+
+        .solution_title {
+            font-size: 22px;
+            padding: 0 30px 0 15px;
+            width: 90px;
+        }
+
+        .solution_description {
+            font-size: 13px !important;
+            line-height: 24px !important;
+        }
+
+        .solution_video_box {
+            width: 230px;
+            float: left;
+            margin-right: 20px;
+            height: 310px;
+        }
+
+        .solution_video_img_outer {
+            position: relative;
+        }
+
+        .solution_video_layer {
+            display: none;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .solution_video_play_btn {
+            display: block;
+            margin: 55px auto;
+        }
+
+        .solution_video_img {
+            display: block;
+            width: 100%;
+        }
+
+        .solution_video_title {
+            color: #0088cb;
+            font-size: 16px !important;
+            padding: 18px 0;
+        }
+
+        .solution_video_description {
+            font-size: 13px !important;
+        }
+
+        .solution_video_length {
+            background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+            border-radius: 10px;
+            bottom: 8px;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 0;
+            position: absolute;
+            right: 9px;
+            text-align: center !important;
+            width: 80px;
+        }
+
+        .slider_outer_gu {
+            width: 979px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider_outer_gu .slider_inner_gu {
+            width: 9999px;
+            margin-left: -979px;
+        }
+
+        .slider_outer_gu .slider_inner_gu li {
+            float: left;
+            position: relative;
+        }
+
+        .slider_outer_gu .slider_inner_gu li img {
+            display: block;
+        }
+
+        .slider_nav_gu {
+            width: 979px;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 16px;
+            text-align: center !important;
+        }
+
+        .slider_nav_gu .slider_disc_gu {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 3px;
+            background: #555;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .splitpage_outer {
+            width: 100%;
+            float: left;
+            text-align: center !important;
+        }
+
+        .splitpage_outer span {
+            cursor: pointer;
+            color: #0088cb;
+        }
+
+        .prepage, .nextpage {
+            display: inline-block;
+            width: 8px;
+            cursor: pointer;
+            margin: 0 16px;
+        }
+
+        .floating_menu_outer {
+            width: 66px;
+            position: fixed;
+            top: 18%;
+            right: 0;
+        }
+
+        .floating_menu_outer .floating_menu_inner {
+            width: 186px;
+        }
+
+        .floating_menu_outer .floating_menu_inner .floating_menu_list {
+            width: 186px;
+            height: 71px;
+            background: #007bb7;
+            color: #fff;
+            cursor: pointer;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            border-left: 1px solid #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .floating_menu_outer .floating_menu_left {
+            width: 66px;
+            vertical-align: middle;
+        }
+
+        .floating_menu_outer .floating_menu_right {
+            width: 110px;
+            padding-left: 10px;
+            vertical-align: middle;
+            font-size: 16px !important;
+        }
+
+        .floating_menu_outer .floating_menu_left img {
+            display: block;
+            margin: 10px auto;
+        }
+
+        .about_us_outer {
+            padding: 33px 25px;
+            background: #1a1819;
+        }
+
+        .about_us_outer .title_gu {
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            padding-bottom: 16px;
+        }
+
+        .about_us_outer .about_us_left {
+            float: left;
+            width: 465.5px;
+        }
+
+        .about_us_outer .about_us_right {
+            float: left;
+            width: 435.5px;
+        }
+
+        .sub_title_gu .about_us_icon {
+            display: block;
+            float: left;
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .sub_title_gu .about_us_title_text {
+            float: left;
+            width: 335px;
+            padding: 6px 10px;
+            border-bottom: 1px solid #fff;
+        }
+
+        .about_us_content {
+            padding: 15px 0;
+        }
+
+        .about_us_content li {
+            float: left;
+            width: 50%;
+            text-align: center;
+            float: left;
+        }
+
+        .about_us_content li img {
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        #link_banner_1 {
+            width: 120px;
+            height: 30px;
+            bottom: 20px;
+            right: 220px;
+        }
+
+        #link_banner_2 {
+            width: 120px;
+            height: 30px;
+            bottom: 20px;
+            right: 90px;
+        }
+
+        .short_video_box {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="images/portal_banner.jpg" alt="EMC培训" title="EMC 大讲堂">
+
+    <p class="summary" id="summary_1" style="padding-bottom:0;">
+        <strong style="font-size:18px;">2017，各位 IT 经理有没有为自己设定一个“小”目标？</strong><br/>
+        不论你希望提升自我，还是帮助公司进一步成长，都需要不断学习业务领域内的新知识，采用最新最合适的解决方案。EMC 大讲堂里有着各路帮助你实现数字化转型的神器：市场第一的全闪存阵列<span
+            style="color:#2c95dd;"> XtremIO </span>，融合各方优势的<span style="color:#2c95dd;">混合云</span>，教你化身大数据时代弄潮儿的<span
+            style="color:#2c95dd;"> Isilon 数据湖</span>；<span style="color:#2c95dd;">经验证的 VxRail 融合基础架构</span>；固若金汤的<span
+            style="color:#2c95dd;">数据保护服务</span>等等。</p>
+    <p class="summary" id="summary_2" style="padding-top:0;">更有在线研讨会，产品发布会，高端论坛，在线访谈答疑，解决方案白皮书等满满干货，助你精进业务。快与 EMC
+        大讲堂一起，实现你的“小”目标大梦想！</p>
+
+    <ul class="tabbar">
+        <li style="background:#0088cb;">解决方案</li>
+        <div style="clear: both"></div>
+    </ul>
+
+    <div class="pagebox tab2" id="solutions" v-cloak>
+        <div class="nav_tab">
+            <a href="javascript:;" v-for="(kind,index) in category" :class="{'isShow':kind.isShow}"
+               @click="handleClick(index)">{{kind.name}}</a>
+            <div style="clear:both;"></div>
+        </div>
+        <div class="pagebox2_bar_box">
+            <div v-for="(kind,index) in category" :class="[{'isShow':kind.isShow},'solution_description_box']">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td><img :src='kind.iconPath' class="solution_icon"></td>
+                        <td class="solution_title">{{kind.name}}</td>
+                        <td class="solution_description">{{kind.intro}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div><!--end pagebox2_bar_box-->
+        <div class="contentbox_2 page2contentbox fixed_chen isShow">
+            <div class='solution_video_box' v-for="(item,ind) in yunjisuan">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in ITzhuanxing">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in shancun">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in rjdy">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in rhjcjg">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in dashuju">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in sjbh">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in anli">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in ccpt">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="contentbox_2 page2contentbox fixed_chen">
+            <div class='solution_video_box' v-for="(item,ind) in fuwu">
+                <div class='solution_video_img_outer'>
+                    <a :href='item.url' target='_blank'>
+                        <div class='solution_video_layer'>
+                            <img src='images/video_play_btn.jpg' class='solution_video_play_btn'>
+                        </div>
+                        <img :src='item.img'>
+                    </a>
+                    <div class='solution_video_length'>{{item.videolength}}</div>
+                </div>
+                <div class='solution_video_title'>
+                    <a :href="item.url" target='_blank' style='color:#0088cb !important;'>{{item.title}}</a>
+                </div>
+                <div class="solution_video_description">
+                    <a :href='item.url' target='_blank' style='color:#fff !important;'>{{item.description}}</a>
+                </div>
+            </div>
+        </div>
+    </div><!--end pagebox-->
+</div>
+
+<script src="js/vue.js"></script>
+<script type="text/javascript">
+    var solutions = new Vue({
+        el: '#solutions',
+        data: {
+            category: [
+                {
+                    name: '云计算',
+                    isShow: true,
+                    iconPath: 'images/solution_icon_1.png',
+                    intro: '混合云促进数字化转型并降低成本 。支持云的新型数据中心帮助您改善传统应用程序的交付，并加快云原生应用程序的开发。企业部署支持云基础架构管理数据和应用程序，可有效解放 IT 团队，助力业绩提高。'
+                }, {
+                    name: 'IT转型',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_13.png',
+                    intro: '移动互联时代的来临，各公司和 IT 部门都要持续开发移动应用程序和嵌入式软件，来实现产品和服务重大转型。变革我们交付 IT 服务所使用的技术，建立现代化的数据中心是 IT 基础架构转型的未来。'
+                }, {
+                    name: '闪存',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_11.png',
+                    intro: '闪存存储是现代化数据中心的重要支柱。它能在整个基础架构中提供一致、可预测、低延迟性能同时，显著降低成本和复杂性。闪存 TCO 比磁盘要低 80%。'
+                }, {
+                    name: '软件定义',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_8.png',
+                    intro: '软件定义可自动执行 IT 服务的配置和部署，是构建现代化数据中心的有力支柱。性能比传统 SAN 提高 8 倍，可为企业提供更加灵活且可编程的数据服务管理方式。'
+                }, {
+                    name: '融合基础架构',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_7.png',
+                    intro: '打造现代化数据中心的第一步是具备基础架构，并实现从构建到购买的根本性转变。融合基础架构不仅能降低单独部署、配置、管理硬件和软件组件的时间和成本，还可加速 IT 投资的收效时间。融合系统必须采用支持第三平台的技术构建而成。'
+                }, {
+                    name: '大数据',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_6.png',
+                    intro: '未来企业需要通过新的“大数据”又被称为“非结构化数据”的分析工具来发现商机和加速业务发展。EMC的数据湖解决方案可以被各种应用程序和工作负载访问和使用，轻松存储、整合、优化、分析管理非结构化数据。降低成本，简化管理为业务提供高度灵活的存储架构，释放数据的价值。'
+                }, {
+                    name: '数据保护',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_5.png',
+                    intro: '最为全球最大的数据保护公司，EMC 公司重新定义数据保护，帮助用户从传统的以服务器为中心的数据备份向更完善的以基础设施及应用为中心的数据保护，支持现代化数据中心的构建以及未来以云服务为中心的数据管理方向平滑迈进。'
+                }, {
+                    name: '案例',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_4.png',
+                    intro: '听来自各个行业的客户分享他们与EMC闪存、超融合、混合云的那些故事……'
+                }, {
+                    name: '存储平台',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_3.png',
+                    intro: 'EMC 的整个存储产品组合经过专门构建和测试，可满足要求最严苛的应用程序、用户及企业的需求。'
+                }, {
+                    name: '服务',
+                    isShow: false,
+                    iconPath: 'images/solution_icon_2.png',
+                    intro: 'EMC 拥有逾 35 年的专业经验，在全球范围内服务于成千上万的客户。获得业界领先的客户服务体验。我们拥有遍布全球的技术支持专业人员网络，凭借其专业知识，加上 EMC 经验证的流程和服务工具，全天候协助您实现业务目标。'
+                }
+            ],
+            solution_video_list:[
+                {
+                    img:"images/solution_video_img_103.gif",
+                    title:"听企业谈 EMC 全闪存+超融合的实用经验",
+                    description:"华泰资产管理独家揭秘  EMC 如何助力企业管理运维",
+                    url:"https://emcinformation.com/495001/SI/",
+                    videolength:"4:14",
+                    category:"ITzhuanxing,rhjcjg,anli"
+                },
+                {
+                    img:"images/solution_video_img_102.jpg",
+                    title:"EMC ISILON 媒体与娱乐存储解决方案",
+                    description:"媒体与娱乐的IT蜕变",
+                    url:"https://emcinformation.com/492603/SI/",
+                    videolength:"30:17",
+                    category:"ITzhuanxing,yunjisuan,anli"
+                },
+                {
+                    img:"images/solution_video_img_101.jpg",
+                    title:"广电行业IT转型推动媒体云建设",
+                    description:"EMC混合云如何满足媒体新兴互联网对云平台的要求",
+                    url:"https://emcinformation.com/492302/SI/",
+                    videolength:"37:21",
+                    category:"ITzhuanxing,yunjisuan,rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_100.jpg",
+                    title:"CCTV云战略案例分享",
+                    description:"来看看CCTV未来的“云图”目标",
+                    url:"https://emcinformation.com/492602/SI/",
+                    videolength:"10:26",
+                    category:"ITzhuanxing,yunjisuan,anli"
+                },
+                {
+                    img:"images/solution_video_img_99.jpg",
+                    title:"SMG融媒体技术应用实践",
+                    description:"看SMG如何打造融媒体服务，实现智慧化传播",
+                    url:"https://emcinformation.com/492601/SI/",
+                    videolength:"17:05",
+                    category:"ITzhuanxing,yunjisuan,anli"
+                },
+                {
+                    img:"images/solution_video_img_98.jpg",
+                    title:"全球媒体行业发展趋势",
+                    description:"2017全球媒体行业发展趋势",
+                    url:"https://emcinformation.com/492301/SI/",
+                    videolength:"20:20",
+                    category:"ITzhuanxing,yunjisuan,dashuju"
+                },
+                {
+                    img:"images/solution_video_img_97.jpg",
+                    title:"广电行业现代化数据中心支撑IT转型",
+                    description:"如何通过基础架构转型助力融合媒体",
+                    url:"https://emcinformation.com/492501/SI/",
+                    videolength:"24:49",
+                    category:"ITzhuanxing,yunjisuan,rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_61.jpg",
+                    title:"“创新先生”Rowan Gibson解读数字化革命下创新思维",
+                    description:"何种思维能够应对数字化革命",
+                    url:"https://emcinformation.com/481601/SI/",
+                    videolength:"56:21",
+                    category:"ITzhuanxing,dashuju,yunjisuan",
+                    isTop5:true
+                },
+                {
+                    img:"images/solution_video_img_60.jpg",
+                    title:"案例分享：中南传媒打造全产业链信息共享平台",
+                    description:"如何与EMC合作实现全产业链的信息共享",
+                    url:"https://emcinformation.com/466501/SI/",
+                    videolength:"25:07",
+                    category:"ITzhuanxing,anli",
+                    isTop5:true
+                },
+                {
+                    img:"images/solution_video_img_59.jpg",
+                    title:"IT转型之拥抱融合架构",
+                    description:"融合基础架构如何支持数字化转型",
+                    url:"https://emcinformation.com/456701/SI/",
+                    videolength:"33:23",
+                    category:"ITzhuanxing,rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_18.jpg",
+                    title:"IT转型之现代数据中心",
+                    description:"如何构建现代数据中心助力IT转型",
+                    url:"https://emcinformation.com/428701/SI/",
+                    videolength:"90:42",
+                    category:"ITzhuanxing,shancun,rhjcjg,yunjisuan,rjdy,sjbhs"
+                },
+                {
+                    img:"images/solution_video_img_84.jpg",
+                    title:"现代 IT 基础架构之超融合 VxRail",
+                    description:"数字化IT转型困境？看超融合VxRail如何快速打造软件定义数据中心",
+                    url:"https://emcinformation.com/489401/SI/",
+                    videolength:"1:10:55",
+                    category:"ITzhuanxing,rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_58.jpg",
+                    title:"IT2020 高端论坛: 数字化转型和IT转型－EMC公司大中华区售前及系统工程部总经理 梁放",
+                    description:"企业如何转型应对第四次产业革命",
+                    url:"https://emcinformation.com/474703/SI/",
+                    videolength:"17:59",
+                    category:"ITzhuanxing,shancun,rhjcjg,yunjisuan,rjdy,sjbh"
+                },
+                {
+                    img:"images/solution_video_img_95.jpg",
+                    title:"IT2020 高端论坛:  应对数字化变革的创新战略",
+                    description:"什么是数字化变革以及如何应对",
+                    url:"https://emcinformation.com/474702/SI/",
+                    videolength:"56:21",
+                    category:"ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_57.jpg",
+                    title:"IT2020 高端论坛:  数字经济，经济发展的新动能－中关村大数据产业联盟副理事长，信息社会50人论坛成员 郭昕",
+                    description:"数字经济发展的5大趋势",
+                    url:"https://emcinformation.com/474605/SI/",
+                    videolength:"31:32",
+                    category:"ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_56.jpg",
+                    title:"IT2020 高端论坛: IT2020和数字化转型－全球副总裁EMC中国卓越研发集团总经理 刘伟博士",
+                    description:"数字化转型过程中的技术问题",
+                    url:"https://emcinformation.com/474701/SI/",
+                    videolength:"25:17",
+                    category:"ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_55.jpg",
+                    title:"IT2020 高端论坛: CIO的当务之急－DELL EMC信息基础架构解决方案集团客户与市场部总裁 Frank Hauck",
+                    description:"Dell和EMC携手意味着什么",
+                    url:"https://emcinformation.com/474604/SI/",
+                    videolength:"35:24",
+                    category:"ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_54.jpg",
+                    title:"IT2020 高端论坛: 领航数字化转型之旅－全球高级副总裁兼EMC大中华区总裁 叶成辉",
+                    description:"预测未来IT市场",
+                    url:"https://emcinformation.com/474503/SI/",
+                    videolength:"8:27",
+                    category:"ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_68.jpg",
+                    title:"IT转型之超融合 VxRail 在线研讨会",
+                    description:"客户经验谈及VxRail、VSAN介绍",
+                    url:"https://emcinformation.com/463801/SI/",
+                    videolength:"1:29:15",
+                    category:"rhjcjg,yunjisuan,ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_81.jpg",
+                    title:"EMC Unity 全闪存中端存储新品",
+                    description:"全闪存中心愿景及Unity介绍和演示",
+                    url:"https://emcinformation.com/444704/SI/",
+                    videolength:"1:43:30",
+                    category:"ITzhuanxing,shancun"
+                },
+                {
+                    img:"images/solution_video_img_53.jpg",
+                    title:"云科演讲-超融合解决方案",
+                    description:"Ykcloud产品介绍及应用场景",
+                    url:"https://emcinformation.com/433306/SI/",
+                    videolength:"19:48",
+                    category:"rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_52.jpg",
+                    title:"IT转型数据保护",
+                    description:"如何让现代化数据保护固若金汤",
+                    url:"https://emcinformation.com/433110/SI/",
+                    videolength:"22:19",
+                    category:"ITzhuanxing,sjbh"
+                },
+                {
+                    img:"images/solution_video_img_51.jpg",
+                    title:"IT转型融合基础架构",
+                    description:"如何搭建现代数据中心",
+                    url:"https://emcinformation.com/433305/SI/",
+                    videolength:"18:39",
+                    category:"ITzhuanxing,rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_80.jpg",
+                    title:"迈向现代化 2016EMC全国巡展：高峰对话/互动问答",
+                    description:"EMC产品在高校中的应用",
+                    url:"https://emcinformation.com/433109/SI/",
+                    videolength:"24:20",
+                    category:"yunjisuan,ITzhuanxing,shancun,rhjcjg,dashuju"
+                },
+                {
+                    img:"images/solution_video_img_17.jpg",
+                    title:"迈向现代化 2016EMC全国巡展：构建IT转型",
+                    description:"EMC的理念、荣誉、服务与转型",
+                    url:"https://emcinformation.com/433303/SI/",
+                    videolength:"36:48",
+                    category:"ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_50.jpg",
+                    title:"IT转型四大支柱之横向扩展",
+                    description:"360度全方位解析Isilon数据湖",
+                    url:"https://emcinformation.com/433402/SI/",
+                    videolength:"24:18",
+                    category:"ITzhuanxing,dashuju"
+                },
+                {
+                    img:"images/solution_video_img_49.jpg",
+                    title:"IT转型四大支柱之闪存",
+                    description:"EMC全闪存家族介绍",
+                    url:"https://emcinformation.com/433108/SI/",
+                    videolength:"36:38",
+                    category:"ITzhuanxing,shancun"
+                },
+                {
+                    img:"images/solution_video_img_48.jpg",
+                    title:"IT转型四大支柱之云赋能和软件定义",
+                    description:"EMC重新定义云、大数据和可信IT",
+                    url:"https://emcinformation.com/433304/SI/",
+                    videolength:"33:26",
+                    category:"ITzhuanxing,yunjisuan,rjdy"
+                },
+                {
+                    img:"images/solution_video_img_70.jpg",
+                    title:"迈向现代化 2016EMC全国巡展：构建IT转型",
+                    description:"EMC的理念、荣誉、服务与转型",
+                    url:"https://emcinformation.com/433303/SI/",
+                    videolength:"36:48",
+                    category:"ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_69.jpg",
+                    title:"EMC “开启闪存技术新纪元，迈向全闪存数据中心”视频回顾",
+                    description:"多位大咖畅聊全闪存数据中心并答疑答",
+                    url:"https://emcinformation.com/428701/SI/",
+                    videolength:"90:42",
+                    category:"shancun,ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_94.jpg",
+                    title:"问与答：重新定义超融合架构——EMC与VMware独家VxRail新品发布在线研讨会 ",
+                    description:"简捷IT是一种什么体验？问与答",
+                    url:"https://emcinformation.com/426604/SI/",
+                    videolength:"32:25",
+                    category:"ITzhuanxing,rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_93.jpg",
+                    title:"IT转型超融合架VxRail应用装置介绍及演示",
+                    description:"超融合架构VxRail介绍，满满干货",
+                    url:"https://emcinformation.com/426603/SI/",
+                    videolength:"35:35",
+                    category:"ITzhuanxing,rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_16.jpg",
+                    title:"超融合架构的发展趋势以vSAN的技术实践",
+                    description:"VSAN介绍、使用场景、案例及优势",
+                    url:"https://emcinformation.com/426503/SI/",
+                    videolength:"24:57",
+                    category:"rhjcjg"
+                },
+                {
+                    img:"images/solution_video_img_15.jpg",
+                    title:"EMC备份归档管理软件包——提供VMware环境下轻松的数据保护",
+                    description:"轻松驾驭VMware数据保护及答疑",
+                    url:"https://emcinformation.com/413103/SI/",
+                    videolength:"53:51",
+                    category:"ITzhuanxing,sjbh"
+                },
+                {
+                    img:"images/solution_video_img_79.jpg",
+                    title:"问与答：《对Oracle数据副本的快速使用及AppSync演示》",
+                    description:"AppSync使用的问答时间",
+                    url:"https://emcinformation.com/412703/SI/",
+                    videolength:"10:59",
+                    category:"shancun,ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_78.jpg",
+                    title:"技术演示：对Oracle数据副本的快速使用及AppSync演示",
+                    description:"手把手演示教授AppSync",
+                    url:"https://emcinformation.com/412803/SI/",
+                    videolength:"21:02",
+                    category:"shancun,ITzhuanxing"
+                },
+                {
+                    img:"images/solution_video_img_66.jpg",
+                    title:"软件定义数据中心",
+                    description:"软件定义塑造更广阔的生态系统",
+                    url:"https://emcinformation.com/296603/SI/",
+                    videolength:"39:01",
+                    category:"rjdy"
+                },
+                {
+                    img:"images/solution_video_img_19.jpg",
+                    title:"EMC 大数据案例介绍",
+                    description:"EMC大数据市场趋势案例<br />实战数据挖掘，保护交易反欺诈",
+                    url:"https://emcinformation.com/294319/SI/",
+                    videolength:"28:05",
+                    category:"dashuju,anli"
+                }
+            ]
+        },
+        methods: {
+            handleClick: function (index) {
+                for (var i = 0; i < this.category.length; i++) {
+                    this.category[i].isShow = false;
+                }
+                this.category[index].isShow = true;
+            }
+        },
+        computed:{
+            yunjisuan:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/yunjisuan/)
+                })
+            },
+            ITzhuanxing:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/ITzhuanxing/)
+                })
+            },
+            shancun:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/shancun/)
+                })
+            },
+            rjdy:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/rjdy/)
+                })
+            },
+            rhjcjg:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/rhjcjg/)
+                })
+            },
+            dashuju:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/dashuju/)
+                })
+            },
+            sjbh:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/sjbh/)
+                })
+            },
+            anli:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/anli/)
+                })
+            },
+            ccpt:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/ccpt/)
+                })
+            },
+            fuwu:function(){
+                return this.solution_video_list.filter(function (item) {
+                    return item.category.match(/fuwu/)
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>
