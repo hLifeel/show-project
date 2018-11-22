@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html class="mgm_recommend">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<title>百闻不如一荐</title>
+	<link rel="stylesheet" type="text/css" href="images/style.css" />
+</head>
+<body class="mgm_recommend">
+	<div class="layout_width">
+		<div class="mgm_card_header" id="mgm_card_header">
+			<div class="mgm_person content_width clearfix">
+				<div class="avatar">
+					<img src="images/mgm_avatar.jpg" />
+				</div>
+				<div class="text">
+					<div class="name">丰丰</div>
+					<div class="event">推荐您办理汇丰信用卡</div>
+				</div>
+			</div>
+		</div>
+		<div class="mgm_card_body">
+			<img src="images/mgm_arrow2.png" class="mgm_prev_card" id="mgm_prev_card" onclick="prev_card()" style="display:none;" />
+			<img src="images/mgm_arrow2.png" class="mgm_next_card" id="mgm_next_card" onclick="next_card()" />
+			<div class="mgm_card_detail" id="mgm_card_detail">
+				<!--汇丰生活信用卡-->
+				<div class="mgm_card_info animate" data-value="choice_card">
+					<div class="mgm_card_content" id="card4_content">
+						<h2>汇丰生活信用卡</h2>
+						<div class="sub_title" style="visibility:hidden;">刷卡享好礼</div>
+						<div class="sub_title">刷卡享好礼</div>
+						<img src="images/mgm_card4_img1.png" onclick="card4_popup.showObject()" />
+						<div class="intro intro4">
+							<ul class="gou">
+								<li>每月2次9元看电影</li>
+								<li>畅享五星酒店豪华自助餐买一赠一</li>
+								<li>网络消费2倍积分</li>
+								<li>非常午餐+人气美食满减优惠</li>
+							</ul>
+						</div>
+						<div class="apply">
+							<div class="title">申请条件</div>
+							<ul class="gou">
+								<li>主卡申请人需年满18周岁，附属卡申请人须年满16周岁。</li>
+								<li>境内居民申请需月薪达人民币4,000元或以上，境外居民申请需月薪达人民币10,000元或以上。</li>
+							</ul>
+						</div>
+						<div class="tips">*详情可查询官网</div>
+						<div class="tips">请问您是否为我行现有客户？如是，<a href="https://creditcards.hsbc.com.cn/hfcoas/etb-1162/index">请点击此处申请</a></div>
+					</div>
+					<div class="btn_panel clearfix">
+						<div class="text">请问您是否为我行现有客户？</div>
+						<a href="#">是，请点击此处申请</a>
+						<a href="#">否，请点击此处申请</a>
+					</div>
+				</div>
+				<!--汇丰旅行信用卡-->
+				<div class="mgm_card_info animate next" data-value="travel_card">
+					<div class="mgm_card_content" id="card3_content">
+						<h2>汇丰旅行信用卡</h2>
+						<div class="sub_title" style="visibility:hidden;">刷卡享好礼</div>
+						<div class="sub_title">刷卡享好礼</div>
+						<img src="images/mgm_card3_img1.png" onclick="card3_popup.showObject()" />
+						<div class="intro intro3">
+							<ul class="gou">
+								<li>五星及高端酒店住宿礼遇</li>
+								<li>12积分兑换1航空里程</li>
+								<li>全年4次机场贵宾厅服务</li>
+								<li>航班延误3小时最高赔付1000元 </li>
+								<li>每月2次9元看电影</li>
+								<li>畅享五星酒店豪华自助餐买一赠一</li>
+								<li>非常午餐+人气美食满减优惠</li>
+							</ul>
+						</div>
+						<div class="apply">
+							<div class="title">申请条件</div>
+							<ul class="gou">
+								<li>主卡申请人需年满22周岁，附属卡申请人须年满16周岁。</li>
+								<li>境内居民申请需月薪达人民币10,000元或以上，境外居民申请需月薪达人民币20,000元或以上。</li>
+							</ul>
+							<div class="title">收费标准</div>
+							<p>汇丰旅行信用卡主卡标准年费人民币2000元。首年激活套卡中的任意一张卡片后收取年费。第二年起可在年费收取日前使用20万积分兑换次年年费。附属卡免收年费。</p>
+						</div>
+						<div class="tips">*详情可查询官网</div>
+						<div class="tips">请问您是否为我行现有客户？如是，<a href="https://creditcards.hsbc.com.cn/hfcoas/etb-1156/index">请点击此处申请</a></div>
+					</div>
+					<div class="btn_panel clearfix">
+						<div class="text">请问您是否为我行现有客户？</div>
+						<a href="#">是，请点击此处申请</a>
+						<a href="#">否，请点击此处申请</a>
+					</div>
+				</div>
+				<!--汇丰卓越理财旅行信用卡-->
+				<div class="mgm_card_info animate next" data-value="premier_travel_card">
+					<div class="mgm_card_content" id="card2_content">
+						<h2>汇丰卓越理财旅行信用卡</h2>
+						<div class="sub_title">（仅限汇丰中国的卓越理财客户申请）</div>
+						<div class="sub_title">刷卡享好礼</div>
+						<img src="images/mgm_card2_img1.png" onclick="card2_popup.showObject()" />
+						<div class="intro intro2">
+							<ul class="gou">
+								<li>全年1次公务舱机票五折购买</li>
+								<li>尊享10积分兑换1航空里程</li>
+								<li>全年10次机场/高铁贵宾厅服务</li>
+								<li>全年5次五星及高端酒店住宿礼遇</li>
+								<li>航空延误3小时最高赔付1000元</li>
+								<li>五星酒店自助餐买一赠一</li>
+								<li>非常午餐+人气美食满减优惠</li>
+							</ul>
+						</div>
+						<div class="apply">
+							<div class="title">申请条件</div>
+							<ul class="gou">
+								<li>主卡仅限汇丰中国卓越理财客户申请且申请人年满22周岁。附属卡申请人须年满16周岁。</li>
+							</ul>
+							<div class="title">收费标准</div>
+							<ul class="gou">
+								<li>符合以下条件的汇丰卓越理财客户申请汇丰卓越理财旅行信用卡，主卡首年年费可享7折优惠：（i）在信用卡获批日前三个月（不含获批当月）均符合合格卓越理财客户条件；或（ii）在信用卡获批日后五个月内（不含获批当月）持续三个月符合合格卓越理财客户条件。如不使用积分兑换主卡次年年费，但自上一次的年费收取日起在汇丰卓越理财旅行世界之极卡™上的有积分消费达到5000美元等值，主卡次年年费可享7折优惠。</li>
+							</ul>
+							<div class="remark">
+								备注：<br>
+								1、合格卓越理财客户为在汇丰中国同一客户号码下所有账户的月内日均总余额均不低于本行厘定的卓越理财最低账户总余额（现为人民币50万元 / 等值）的客户。<br>
+								2、符合条件（i）时，于首年收取年费的当月账单或次月账单内体现30%折扣优惠；或符合条件（ii）时，于第6或第7个月账单内体现30%折扣优惠。
+							</div>
+						</div>
+						<div class="tips">*详情可查询官网</div>
+					</div>
+					<a href="https://creditcards.hsbc.com.cn/hfcoas/etb-1164/index" class="mgm_btn">快&nbsp;速&nbsp;申&nbsp;请&nbsp;抢&nbsp;好&nbsp;礼&nbsp;&nbsp;&gt;&gt;</a>
+				</div>
+				<!--汇丰卓越理财信用卡-->
+				<div class="mgm_card_info animate next" data-value="premier_card">
+					<div class="mgm_card_content" id="card1_content">
+						<h2>汇丰卓越理财信用卡</h2>
+						<div class="sub_title">（仅限汇丰中国的卓越理财客户申请）</div>
+						<div class="sub_title" style="visibility:hidden;">刷卡享好礼</div>
+						<img src="images/mgm_card1_img1.png" />
+						<div class="intro intro1">
+							<ul class="gou">
+								<li>0元国际交易接入服务费</li>
+								<li>9元约“汇”看电影</li>
+								<li>五星酒店自助餐买一赠一</li>
+								<li>境外消费/网络消费/分期交易享2倍积分</li>
+								<li>全球Boingo无线热点免费接入</li>
+								<li>非常午餐+人气美食满减优惠</li>
+							</ul>
+						</div>
+						<div class="apply">
+							<div class="title">申请条件</div>
+							<ul class="gou">
+								<li>主卡仅限汇丰中国卓越理财客户申请且申请人年满22周岁。附属卡申请人须年满16周岁。</li>
+							</ul>
+							<div class="title">收费标准</div>
+							<ul class="gou">
+								<li>汇丰卓越理财信用卡限汇丰中国卓越理财客户申请，主卡标准年费人民币1000元。主卡首年免年费，次年及后续持卡期间，如持卡人仍为卓越理财客户，本卡继续享受年费全免优惠。附属卡免收年费。</li>
+							</ul>
+						</div>
+						<div class="tips">*详情可查询官网</div>
+					</div>
+					<a href="https://creditcards.hsbc.com.cn/hfcoas/etb-1163/index" class="mgm_btn">快&nbsp;速&nbsp;申&nbsp;请&nbsp;抢&nbsp;好&nbsp;礼&nbsp;&nbsp;&gt;&gt;</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 汇丰卓越理财旅行信用卡 popup -->
+	<div class="mgm_popup" id="card2_popup">
+		<div class="center_center_box">
+			<div class="panel border_box tnc">
+				<img src="images/mgm_popup_close.png" class="close" onclick="card2_popup.hideObject()" />
+				<div class="part">
+					<ul class="point">
+						<li>
+							<strong>刷卡好礼：</strong>2018年6月1日-2018年9月30日期间申请汇丰卓越理财旅行信用卡，卡片获批后60天内激活并在此60天期限内消费次数满<span>3笔</span>，且每笔原始积分消费（包含支付宝、财付通消费）金额满等值人民币<span>688元</span>（含），即可在满足活动条件后2个月内通过汇丰中国权益平台“荟·赏掌中世界”领取<span>15万信用卡积分</span>（15万积分可兑换1.5万亚万里程，可兑换单人香港到台北往返的机票）。<br>
+							或<br>
+							2018年06月01日-2018年09月30日期间申请汇丰卓越理财旅行信用卡，卡片获批后60天内激活并在此60天期限内消费次数满<span>9笔</span>，且每笔原始积分消费（包含支付宝、财付通消费）金额满等值人民币<span>688元</span>（含），即可在满足活动条件后2个月内通过汇丰中国权益平台“荟·赏 掌中世界”领取<span>30万信用卡积分</span>（30万积分可兑换3万亚万里程，可兑换双人香港到台北往返的机票）。
+						</li>
+					</ul>
+				</div>
+				<div class="part">
+					*目前，汇丰卓越理财旅行信用卡仅向汇丰银行（中国）有限公司的卓越理财客户开放申请。
+				</div>
+				<div class="part">
+					温馨提示：兑换案例仅供参考，具体信用卡积分兑换航空里程规则请以汇丰中国信用卡官网-积分与权益页面及实际兑换页面显示为准。
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 汇丰旅行信用卡 popup -->
+	<div class="mgm_popup" id="card3_popup">
+		<div class="center_center_box">
+			<div class="panel border_box tnc">
+				<img src="images/mgm_popup_close.png" class="close" onclick="card3_popup.hideObject()" />
+				<div class="part">
+					<ul class="point">
+						<li>
+							<strong>刷卡好礼：</strong>2018年6月1日-2018年9月30日期间申请汇丰旅行信用卡，卡片获批后60天内激活并在此60天期限内消费次数满<span>3笔</span>，且每笔原始积分消费（包含支付宝、财付通消费）金额满等值人民币<span>588元</span>（含），即可在满足活动条件后2个月内通过汇丰中国权益平台“荟·赏  掌中世界”领取<span>12万信用卡积分</span>（12万信用卡积分可兑换1万亚万里程）。<br>
+							或<br>
+							2018年06月01日-2018年09月30日期间申请汇丰旅行信用卡，卡片获批后60天内激活并在此60天期限内消费次数满<span>9笔</span>，且每笔原始积分消费（包含支付宝、财付通消费）金额满等值人民币<span>588元</span>（含），即可在满足活动条件后2个月内通过汇丰中国权益平台“荟·赏 掌中世界”领取<span>24万信用卡积分</span>（24万积分可兑换2万亚万里程，可兑换单人从上海到东京往返的机票）。
+						</li>
+					</ul>
+				</div>
+				<div class="part">
+					温馨提示：兑换案例仅供参考，具体信用卡积分兑换航空里程规则请以汇丰中国信用卡官网-积分与权益页面及实际兑换页面显示为准。
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 汇丰生活信用卡 popup -->
+	<div class="mgm_popup" id="card4_popup">
+		<div class="center_center_box">
+			<div class="panel border_box tnc">
+				<img src="images/mgm_popup_close.png" class="close" onclick="card4_popup.hideObject()" />
+				<div class="part">
+					<ul class="point">
+						<li>
+							<strong>刷卡好礼：</strong>2018年6月1日-2018年9月30日期间申请汇丰生活信用卡，卡片获批后60天内激活并在此60天期限内消费<span>1笔</span>，且该笔原始积分消费（包含支付宝、财付通消费）金额满等值人民币<span>66元</span>（含），即可在满足活动条件后2个月内通过汇丰中国权益平台“荟·赏 掌中世界”领取<span>阿尔卑斯20寸拉杆箱</span>。<br>
+							或<br>
+							2018年6月1日-2018年9月30日期间申请汇丰生活信用卡，卡片获批后60天内激活并在此60天期限内消费<span>1笔</span>，且该笔原始积分消费（包含支付宝、财付通消费）金额满等值人民币<span>288元</span>（含），即可在满足活动条件后2个月内通过汇丰中国权益平台“荟·赏 掌中世界”领取<span>阿尔卑斯20寸拉杆箱</span>或<span>Oral B 牙刷+乐扣保温杯礼盒套装</span>。
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/func.js"></script>
+</body>
+</html>
