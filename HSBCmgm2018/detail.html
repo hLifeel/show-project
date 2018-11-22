@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<title>百闻不如一荐</title>
+	<link rel="stylesheet" type="text/css" href="images/style.css" />
+</head>
+<body>
+	<div class="layout">
+		<img src="images/mgm_title.png" class="mgm_title" />
+		<div class="content_width">
+			<div class="mgm_person_count">
+				<div class="block border_box">
+					<div class="name">申请提交<img src="images/mgm_wen.png" onclick="block1.showObject()" /></div>
+					<div class="count"><span id="block1_count">8</span>人</div>
+				</div>
+				<div class="block border_box">
+					<div class="name">审核通过<img src="images/mgm_wen.png" onclick="block2.showObject()" /></div>
+					<div class="count"><span id="block2_count">6</span>人</div>
+				</div>
+				<div class="block border_box">
+					<div class="name">成功推荐<img src="images/mgm_wen.png" onclick="block3.showObject()" /></div>
+					<div class="count"><span id="block3_count">4</span>人</div>
+				</div>
+			</div>
+			<canvas width="694" height="548" id="mgm_detail" class="mgm_detail"></canvas>
+			<div class="mgm_broadcast2">
+				<div>
+					温馨提示：根据不同的成功推荐新客户数量，推荐人可获得相对应的奖励。每个推荐人在活动期间只能获得一次奖励。例如，推荐人成功推荐30人，可选择任一礼品，若选择了新秀丽20寸四轮万向时尚拉杆箱，则无法再领取其他礼品。<br>
+					若您的汇丰信用卡状态异常，则不可参与本次活动且无法领取活动奖品。<br>
+					被推荐人仅限申请了汇丰中国信用卡主卡的客户。被推荐人可选择申请套卡（含1张银联人民币信用卡及1张万事达美元信用卡）或申请1张银联人民币信用卡。
+				</div>
+			</div>
+			<a href="#" class="mgm_btn mgm_detail_btn_left">继续推荐</a>
+			<a href="#" class="mgm_btn2 mgm_detail_btn_right">领取礼品</a>
+			<div class="clear"></div>
+			<div class="mgm_link">
+				<a onclick="tnc.showObject()" style="color:#c00;">活动细则</a>
+			</div>
+		</div>
+	</div>
+	<div class="mgm_popup" id="block1">
+		<div class="center_center_box">
+			<div class="panel border_box" style="text-align:center;">
+				<img src="images/mgm_popup_close.png" class="close" onclick="block1.hideObject()" />
+				<br><strong>申请提交</strong><br><br>
+				您的亲友已通过您分享的链接<br>成功提交信用卡申请。<br><br>
+			</div>
+		</div>
+	</div>
+	<div class="mgm_popup" id="block2">
+		<div class="center_center_box">
+			<div class="panel border_box" style="text-align:center;">
+				<img src="images/mgm_popup_close.png" class="close" onclick="block2.hideObject()" />
+				<br><strong>审核通过</strong><br><br>
+				您亲友提交的汇丰银行信用卡申请<br>通过综合评估，已获审批。<br><br>
+			</div>
+		</div>
+	</div>
+	<div class="mgm_popup" id="block3">
+		<div class="center_center_box">
+			<div class="panel border_box" style="text-align:center;">
+				<img src="images/mgm_popup_close.png" class="close" onclick="block3.hideObject()" />
+				<br><strong>成功推荐</strong><br><br>
+				通过您分享的链接成功提交信用卡<br>申请并获批的亲友，需在2018年9月30日前激活信用卡并完成三笔66元消费，<br>才可计为您名下的一次成功推荐哦。<br><br>
+			</div>
+		</div>
+	</div>
+	<div class="mgm_popup" id="tnc">
+		<div class="center_center_box">
+			<div class="panel border_box tnc">
+				<img src="images/mgm_popup_close.png" class="close" onclick="tnc.hideObject()" />
+				<div class="scroll">
+					<div class="part">
+						<strong>活动期间：</strong><br>
+						2018年6月1日至2018年7月31日（含起讫日）
+					</div>
+					<div class="part">
+						<strong>活动对象：</strong><br>
+						汇丰中国信用卡主卡持卡人，包括在活动期间经成功推荐而成为汇丰中国信用卡主卡持卡人的客户（以下或简称 “推荐人”）
+					</div>
+					<div class="part">
+						<strong>活动内容：</strong><br>
+						2018年6月1日至2018年7月31日期间（含起讫日），推荐人将个人专属推荐链接分享给微信好友或分享到微信朋友圈，推荐新客户通过本活动专属链接申请汇丰中国信用卡，本活动所称被推荐人仅限申请了汇丰中国信用卡主卡的客户（“被推荐人”）。被推荐人在活动期间成功提交申请，在2018年9月30日前获批卡片，并在此期限前激活及使用银联人民币信用卡完成3笔可计积分消费（包含支付宝、财付通消费），且单笔消费金额满人民币66元（含），可计为一个成功推荐；被推荐人激活及使用万事达美元信用卡的积分消费不计入本活动。获批附属卡的持卡人将不被计入成功推荐客户数。根据不同的成功推荐新客户数量，推荐人可获得以下推荐奖励，并可在2018年6月1日至2018年11月30日期间通过汇丰中国权益平台“荟·赏 掌中世界” （以下称“汇丰中国权益平台”）领取推荐奖励。<br>
+						每个推荐人在活动期间只能获得一次奖励。例如，推荐人成功推荐30人，可选择下表所列任一礼品，若选择了新秀丽20寸四轮万向时尚拉杆箱，则无法再领取其他礼品。
+					</div>
+					<div class="part">
+						<img src="images/mgm_tnc.jpg" class="tnc_img" />
+						实物图片仅供参考，具体颜色、型号以实际发送为准。
+					</div>
+					<div class="part">
+						<strong>活动细则：</strong>
+						<ul class="point">
+							<li>推荐人必须在活动期间为汇丰中国信用卡主卡持卡人。</li>
+							<li>本活动仅限通过“汇丰中国客户服务”微信服务号在线参与。</li>
+							<li>推荐人须在活动期间转发推荐人专属分享链接，被推荐人须在活动期间通过该链接成功提交信用卡申请。</li>
+							<li><strong>被推荐人仅限申请了汇丰中国信用卡主卡的客户。被推荐人可选择申请套卡（含1张银联人民币信用卡及1张万事达美元信用卡）或申请1张银联人民币信用卡。</strong></li>
+							<li><strong>若被推荐人在2018年9月30日前获批卡片，并在此期限前激活及使用银联人民币信用卡完成3笔可计积分消费（包含支付宝、财付通消费），且每笔消费金额满人民币66元（含），则可计为一个成功推荐；激活及使用万事达美元信用卡的积分消费不计入本活动。获批附属卡的持卡人将不被计入成功推荐客户数。根据不同的成功推荐新客户数，推荐人可获得相对应的奖励。</strong></li>
+							<li>被推荐人须完成的指定消费以银行系统实际入账时间和金额为准。</li>
+							<li>推荐人可获得的刷卡金仅限于刷卡消费、抵扣还款，不可取现。</li>
+							<li>推荐人可在成功推荐后的次周内登录“汇丰中国客户服务” 点击信用卡“办卡.推荐”内的“百闻不如一‘荐’”活动页面查看最新的推荐结果。</li>
+							<li><strong>推荐人可在2018年6月1日至2018年11月30日通过汇丰中国权益平台，根据不同的成功推荐客户数量选择领取任一其符合的条件所对应的礼品，每个推荐人在活动期间只能获得一次奖励。逾期未领取，视为自动放弃奖励。如汇丰中国对领取时间另有通知的，以通知为准。</strong></li>
+							<li>若推荐人符合条件后选择领取的为实物礼品，实体礼物将于推荐人通过汇丰中国权益平台成功领取礼品后的次月月底前寄送至指定地址，如遇春节等法定节假日，礼品递送日期将相应顺延。若推荐人符合条件后选择领取的为刷卡金，刷卡金将于推荐人通过汇丰中国权益平台成功领取礼品后的次月月底前直接计入推荐人的信用卡账户。</li>
+							<li>如未在相应时间内收到刷卡金或未在相应时间内收到礼品，请推荐人联系汇丰中国信用卡24小时客户服务热线400-86-95366/95366（境内）或86-21-20534333（境外）。关于实物礼品有关问题，汇丰中国可协助转接至礼品供应商。</li>
+							<li>实物礼品相关信息及图片仅供参考，以实际发放型号为准。活动礼品不能退换、调换颜色款式、折抵其它货品或兑换成现金。</li>
+							<li>实物礼品由第三方供应商向如何条件的推荐人提供并负责配送，并由其就礼品质量、配送和售后服务承担责任。活动礼品的配送范围仅限中国大陆地区。汇丰中国不承担与礼品的领取或其他相关事宜有关的任何税费。</li>
+							<li><strong>推荐人同意向汇丰中国及第三方配送公司提供姓名、手机号码、寄送地址等信息以便接收活动奖礼品。推荐人须保证其留存在汇丰中国的个人信息真实准确。如其个人信息有任何改变，推荐人应及时通知汇丰中国予以变更。如因推荐人提供的个人信息不准确或发生变更而无法送达礼品的，汇丰中国不承担任何责任。</strong></li>
+							<li><strong>推荐人的信用卡账户需为正常有效账户，逾期、被销户或被冻结等非正常状态账户不能参与本活动。信用卡透支款项应当用于合法消费领域，不得用于生产经营、投资等非消费领域。被推荐人有退款、虚假消费、套现、违法交易等情形的，不能算作一个成功推荐。汇丰中国保留对虚假消费、套现、违法交易的推荐人和被推荐人进一步追究责任的权利（包括但不限于直接取消其参与本活动的资格、要求返还礼品、直接扣除积分、中止信用卡使用或终止信用卡账户等）。</strong></li>
+							<li>如有汇丰中国销售人员或第三方中介机构告知或暗示，申请汇丰中国信用卡即可免费获赠POS机（进行信用卡套现）及其他非汇丰中国信用卡官网所示的成功推荐奖励，请切勿接受并确保个人信息安全，谨防伪冒申请、诈骗或其他违法违规事件发生。</li>
+							<li>汇丰中国未赋予推荐人任何发卡代理权利，被推荐人是否能获批汇丰中国银行信用卡及其获批信用卡的类型和额度，由汇丰中国综合考量后决定，被推荐人无需向推荐人支付任何办卡费用。</li>
+							<li>以汇丰中国或者汇丰中国工作人员的名义进行发卡营销的，汇丰中国将取消其参加活动的资格，并保留对其追究法律责任的权利。</li>
+							<li>在法律允许的范围内，汇丰中国有权对本活动相关内容（如延迟或提前终止本活动、变更适用条件、更换同等价值奖品等）进行变更并在合理时间内通过汇丰中国官方网站公布。推荐人有权要求汇丰中国就活动规则进行充分解释和说明。</li>
+							<li>本活动未尽事宜，受《汇丰银行（中国）有限公司信用卡章程》、《汇丰银行（中国）有限公司信用卡领用合约》及其他相关文件约束。</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/func.js"></script>
+</body>
+</html>
