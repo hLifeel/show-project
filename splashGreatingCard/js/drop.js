@@ -82,7 +82,7 @@ function snowMove(date) {
     if (date - lastTime > createDuration) {
         createSnow();
         lastTime = date;
-        createDuration = Math.random()+100;
+        createDuration = Math.random()+300;
     }
     var endIndex = -1,
         i = 0;
@@ -91,6 +91,9 @@ function snowMove(date) {
         if (!s.isEnd) {
             s.move();
             s.fill(context);
+            if(s.y>canvas.height){
+                s.isEnd=true;
+            }
         } else {
             endIndex = i;
         }
