@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="stylesheet" href="css/global.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="Layout">
+    <div class="center">
+        <div id="banner" class="banner">
+            <img src="images/website_layout_01.jpg" alt="">
+            <div class="chooseLang">
+                <div class="langbox">
+                    中文
+                    <div class="droplist">
+                        <a href="#">English</a>
+                    </div>
+                </div>
+                <div class="arrowWrap">
+                    <img src="images/downArrow.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="middleContent">
+            <div class="centerContent">
+                一直以来，<strong>斯堪尼亚</strong>都致力于为客户提供高效、环保的可持续运输解决方案，并最大限度的减少产品对环境造成的影响。 <br>
+                现在，我们期待将品牌可持续发展的理念，延伸到我们的工作与生活中，一起携手为可持续发展助力！
+            </div>
+        </div>
+        <div id="tabSection" class="tabSection" :class="setCls()">
+            <div class="centerContent">
+                <tabs v-model="activeKey">
+                    <!--<pane label="环保pk赛" name="0">
+                        <div class="item1">
+                            <div class="item2">
+                                <div class="item_detail">
+                                    <div class="icon">
+                                        <img src="images/employee.png" class="icon_img" alt="">
+                                        <div class="icon_title">环保日参与者</div>
+                                    </div>
+                                    <div class="rule_intro">
+                                        斯堪尼亚办公室全体员工，<br>
+                                        以部门为单位参赛
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item2">
+                                <div class="item_detail">
+                                    <div class="icon">
+                                        <img src="images/calendar.png" class="icon_img" alt="">
+                                        <div class="icon_title">环保日频率</div>
+                                    </div>
+                                    <div class="rule_intro">
+                                        每月1次，1次1天（上班时间）<br>
+                                        每月5号，为斯堪尼亚环保日<br>
+                                        （如遇节假日，环保日顺移至下一周的周五）
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item1">
+                            <div class="item_detail">
+                                <div class="icon">
+                                    <img src="images/clock.png" class="icon_img" alt="">
+                                    <div class="icon_title">PK赛时间 <br>9：00~17：30</div>
+                                </div>
+                                <div class="rule_intro">
+                                    <strong>计分方法：</strong><br>
+                                    1. 以部门或区域为分组进行PK，部门内每个人起始分值为100分，团队总分为100乘以实际人数。<br>
+                                    2. 每个员工需遵守环保日当天的规则，若员工未能遵守，则其所在的团队依据相关依据扣10分。<br>
+                                    3. 最终以团队的总成绩除以实际人数，取平均分作为每一组的最终成绩。（考虑到不同部门人数有所不同，取平均分相对公平）
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item1">
+                            <div class="item_detail">
+                                <div class="icon">
+                                    <img src="images/progress.png" class="icon_img" alt="">
+                                    <div class="icon_title">评比流程</div>
+                                </div>
+                                <div class="rule_intro">
+                                    1. 环保日PK赛从上午九点开始，到下午五点半结束，并进行结果统计。为保证比赛公平性，届时将由行政发起，每组出一个代表共同统计。（具体开始及统计时间可根据斯堪尼亚上班时间再做调整）<br>
+                                    2. 统计包括：① 每个团队当天扣分情况。 ② 团队当天垃圾情况，垃圾是否分类正确及违反规定的件数。<br>
+                                    3. 根据统计结果评选出获胜组，并为他们颁发奖品——环保周边。
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item1">
+                            <div class="item_detail horizontal">
+                                <div class="icon">
+                                    <img src="images/extraPoint.png" class="icon_img" alt="">
+                                    <div class="icon_title">PK赛评判标准</div>
+                                </div>
+                                <div class="rule_intro">
+                                    <div class="coverBG bg1">
+                                        <strong>加分：</strong><br>
+                                        1. 员工主动在公司Reflex/微信群等平台展示传播以下环保行为可获得加分，发布1次加10分。<br>
+                                        2. 做好垃圾分类和丢弃<br>
+                                        3. 带自己的杯子去饮品店买饮料，如带水杯去星巴克买咖啡<br>
+                                        4. 午餐自带饭盒或餐具<br>
+                                        5. 不点外卖<br><br>
+                                        *每个团队加分行为封顶5次，且个人单项行为不可重复（允许同一组内不同组员完成相同行为）
+                                    </div>
+                                    <div class="coverBG bg2">
+                                        <strong>扣分：</strong><br>
+                                        1. 使用一次性餐具<br>
+                                        2.  减少非必要纸张的使用及浪费，每人打印纸张数量不得超过10张<br>
+                                        3.  使用一次性纸杯（仅供访客使用）<br>
+                                        4. 产生塑料垃圾，例如外卖、零食产生的塑料包装
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </pane>-->
+                    <pane label="7天零垃圾生活手册" name="1">
+                        <div id="handbook" class="handbook">
+                            <div class="handbookType">
+                                <div v-for="(item, index) in btnInfo" class="typeBtn" :class="btnCls(index)"
+                                    @click="changeBtn(index)">
+                                    {{item.txt}}
+                                </div>
+                            </div>
+                            <div class="handbookContent">
+                                <div class="slideArea active">
+                                    <div class="slideWindow">
+                                        <div class="slideWrap">
+                                            <img src="images/upgrade1.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade2.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade3.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade4.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade5.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade6.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade7.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade8.jpg" class="detailInfo" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="previewBar">
+                                        <img src="images/leftArrow.png" class="arrow doLeft" alt="">
+                                        <img src="images/rightArrow.png" class="arrow doRight" alt="">
+                                        <div class="previewSlide">
+                                            <div class="previewWrap"></div>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="downloadPDF">下载手册</a>
+                                </div>
+                                <div class="slideArea">
+                                    <div class="slideWindow">
+                                        <div class="slideWrap">
+                                            <img src="images/upgrade2.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade3.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade4.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade5.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade6.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade7.jpg" class="detailInfo" alt="">
+                                            <img src="images/upgrade8.jpg" class="detailInfo" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="previewBar">
+                                        <img src="images/leftArrow.png" class="arrow doLeft" alt="">
+                                        <img src="images/rightArrow.png" class="arrow doRight" alt="">
+                                        <div class="previewSlide">
+                                            <div class="previewWrap"></div>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="downloadPDF">下载手册</a>
+                                </div>
+                            </div>
+                        </div>
+                    </pane>
+                    <pane label="尼说" name="2">
+                        <div class="dialogueArea">
+                            <div class="dialogue">
+                                <img src="images/avator.png" class="avator" alt="">
+                                <div class="message leftMessage">
+                                    <div class="text">Hello</div>
+                                    <div class="clear"></div>
+                                    <div class="file">
+                                        <img src="images/file1.jpg" alt="">
+                                        <img src="images/file1.jpg" alt="">
+                                        <img src="images/file1.jpg" alt="">
+                                        <img src="images/file1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dialogue">
+                                <div class="message rightMessage">
+                                    <div class="text">Hello</div>
+                                    <div class="clear"></div>
+                                    <div class="file">
+                                        <img src="images/file2.jpg" alt="">
+                                        <img src="images/file2.jpg" alt="">
+                                        <img src="images/file2.jpg" alt="">
+                                        <img src="images/file2.jpg" alt="">
+                                    </div>
+                                </div>
+                                <img src="images/avator.png" class="avator" alt="">
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <form action="" method="post">
+                                <input type="text" name="comment" class="commentInp" placeholder="提交你的评论">
+                                <div class="actionArea">
+                                    <label class="uploadWrap">
+                                        <input type="file" name="uploadInp" class="uploadInp">
+                                        <img src="images/upload_icon.png" class="upload_icon" alt="">
+                                    </label>
+
+                                    <input type="submit" value="提交" class="submit_btn">
+                                </div>
+                            </form>
+                        </div>
+                    </pane>
+                </tabs>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vue.js"></script>
+<script src="js/pane.js"></script>
+<script src="js/tabs.js"></script>
+<script type="text/javascript" src="js/func.js"></script>
+</body>
+</html>
