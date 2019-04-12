@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<title>新奢学院摸底测试</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css?201806041" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.particleground.js"></script>
+	<script type="text/javascript" src="js/demo.js?201806041"></script>
+	<link rel="stylesheet" href="css/style.less">
+</head>
+<body>
+	<div id="loading_section" class="loading_section">
+		<div class="loading_show">
+			<svg id="triangle" width="150px" height="150px" viewBox="-3 -4 39 39">
+				<polygon fill="#111" stroke="#A87B65" stroke-width="0.7" points="16,0 32,32 0,32"></polygon>
+			</svg>
+			<img src="images/eye.png" alt="" class="load_eye">
+			<div class="load_txt">试卷正在打印中...</div>
+		</div>
+	</div>
+	<div class="layout" id="layout">
+		<div class="part part1" id="part1">
+			<img src="images/logo.png" class="logo" />
+			<div id="part1_move" class="part1_move">
+				<img src="images/alphabet.png" class="alphabet" id="alphabet" />
+				<div id="particles" class="particles"></div>
+				<div class="content center_center_box"><div>
+					<div class="title">
+						<canvas id="college_bg" class="college_bg" width="750" height="592"></canvas>
+						<canvas id="trigger" class="trigger" width="750" height="592"></canvas>
+						<div class="college center_center_box" id="college"><div>
+							<img src="images/college.png" />
+						</div></div>
+					</div>
+					<div class="intro">在体验升级的新奢世界里<br>你自带哪种属性?</div>
+					<input type="button" class="btn input_no_style" onclick="nextPage()" value="开始测试" />
+				</div></div>
+			</div>
+		</div><!-- part1 end -->
+		<div class="part part2 next" id="part2">
+			<!-- <img src="images/logo.png" class="logo" /> -->
+			<div class="content center_center_box"><div>
+				<img src="images/alphabet.png" class="alphabet" id="alphabet2" />
+				<div class="name">你的名字</div>
+				<input type="text" value="" maxlength="6" id="name" class="txt input_no_style border_box" />
+				<input type="button" class="btn input_no_style" onclick="nextPage()" value="确定" />
+			</div></div>
+		</div><!-- part2 end -->
+		<div class="part part3 next" id="part3">
+			<img src="images/logo.png" class="logo" />
+			<div class="content">
+				<div class="question">在<span>分子料理餐厅</span>就餐时，<br>哪个地方会让你给出五星好评？</div>
+				<div class="answer clearfix" data-index="0" onclick="nextPage(this)">
+					<div class="option">A.</div>
+					<div class="text">60°旋转让每一道菜搭配不同夜色</div>
+				</div>
+				<div class="answer clearfix" data-index="1" onclick="nextPage(this)">
+					<div class="option">B.</div>
+					<div class="text">服务生在你与好友交流达到冰点时恰好出现</div>
+				</div>
+				<div class="answer clearfix" data-index="2" onclick="nextPage(this)">
+					<div class="option">C.</div>
+					<div class="text">3D全息投影把与食物的故事讲给你听</div>
+				</div>
+			</div>
+		</div><!-- part3 end -->
+		<div class="part part4 next" id="part4">
+			<img src="images/logo.png" class="logo" />
+			<div class="content">
+				<div class="question">走进<span>奢侈品店</span>后，<br>以下哪件事会让你感觉到超出预期？</div>
+				<div class="answer clearfix" data-index="0" onclick="nextPage(this)">
+					<div class="option">A.</div>
+					<div class="text">关店为你提供一对一服务</div>
+				</div>
+				<div class="answer clearfix" data-index="1" onclick="nextPage(this)">
+					<div class="option">B.</div>
+					<div class="text">店员拥有克制而礼貌的专业素养</div>
+				</div>
+				<div class="answer clearfix" data-index="2" onclick="nextPage(this)">
+					<div class="option">C.</div>
+					<div class="text">店内有品牌的体验式跨界项目</div>
+				</div>
+			</div>
+		</div><!-- part4 end -->
+		<div class="part part5 next" id="part5">
+			<img src="images/logo.png" class="logo" />
+			<div class="content">
+				<div class="question">当你准备预订<span>奢华度假村酒店</span>时，<br>哪个因素会让你确定心意？</div>
+				<div class="answer clearfix" data-index="0" onclick="nextPage(this)">
+					<div class="option">A.</div>
+					<div class="text">独家邀请至VIP贵宾室品尝新菜品</div>
+				</div>
+				<div class="answer clearfix" data-index="1" onclick="nextPage(this)">
+					<div class="option">B.</div>
+					<div class="text">服务员在微笑与你打招呼时能叫出你的名字</div>
+				</div>
+				<div class="answer clearfix" data-index="2" onclick="nextPage(this)">
+					<div class="option">C.</div>
+					<div class="text">套房由著名建筑师设计，极具艺术感</div>
+				</div>
+			</div>
+		</div><!-- part5 end -->
+		<div class="part part6 next" id="part6">
+			<img src="images/logo.png" class="logo" />
+			<div class="content">
+				<div class="question">当你计划一场<span>轻奢型南极旅行</span>时，<br>哪种方式是你一心向往？</div>
+				<div class="answer clearfix" data-index="0" onclick="nextPage(this)">
+					<div class="option">A.</div>
+					<div class="text">摆着大字躺在玻璃小屋中欣赏极光</div>
+				</div>
+				<div class="answer clearfix" data-index="1" onclick="nextPage(this)">
+					<div class="option">B.</div>
+					<div class="text">极地团队带你正确打开深度游模式</div>
+				</div>
+				<div class="answer clearfix" data-index="2" onclick="nextPage(this)">
+					<div class="option">C.</div>
+					<div class="text">与企鹅亲密接触为它们穿上新毛衣</div>
+				</div>
+			</div>
+		</div><!-- part6 end -->
+		<div class="part part7 next" id="part7">
+			<img src="images/logo.png" class="logo" />
+			<div class="content">
+				<div class="question"><span>拉菲庄园</span>园主向你发出邀请，<br>你会选择以下哪种？</div>
+				<div class="answer clearfix" data-index="0" onclick="nextPage(this)">
+					<div class="option">A.</div>
+					<div class="text">参观葡萄园和酒窖并在此住上一晚</div>
+				</div>
+				<div class="answer clearfix" data-index="1" onclick="nextPage(this)">
+					<div class="option">B.</div>
+					<div class="text">酿酒大师为你讲解葡萄酒历史起源及鉴赏方式</div>
+				</div>
+				<div class="answer clearfix" data-index="2" onclick="nextPage(this)">
+					<div class="option">C.</div>
+					<div class="text">品尝市面上稀缺的酒种</div>
+				</div>
+			</div>
+		</div><!-- part7 end -->
+		<div class="part part8 next" id="part8">
+			<img src="images/logo.png" class="logo" />
+			<div class="content">
+				<div class="question">在<span>皇家国际邮轮</span>度假，<br>以下哪件事会让你觉得值回票价？</div>
+				<div class="answer clearfix" data-index="0" onclick="nextPage(this)">
+					<div class="option">A.</div>
+					<div class="text">独自承包125平方米私密而舒适的房间</div>
+				</div>
+				<div class="answer clearfix" data-index="1" onclick="nextPage(this)">
+					<div class="option">B.</div>
+					<div class="text">能品尝到来自世界各地的美食</div>
+				</div>
+				<div class="answer clearfix" data-index="2" onclick="nextPage(this)">
+					<div class="option">C.</div>
+					<div class="text">与船长单独共进晚餐</div>
+				</div>
+			</div>
+		</div><!-- part8 end -->
+		<div class="part part9 next" id="part9">
+			<img src="images/logo.png" class="logo" />
+			<div class="content">
+				<div class="question">当你走进一家<span>神秘的剧场</span>，<br>你希望它是以下哪种？</div>
+				<div class="answer clearfix" data-index="0" onclick="nextPage(this)">
+					<div class="option">A.</div>
+					<div class="text">拥有独立的个人空间免受他人打扰</div>
+				</div>
+				<div class="answer clearfix" data-index="1" onclick="nextPage(this)">
+					<div class="option">B.</div>
+					<div class="text">在虚拟世界里感受全方位的数字体验</div>
+				</div>
+				<div class="answer clearfix" data-index="2" onclick="nextPage(this)">
+					<div class="option">C.</div>
+					<div class="text">被赋予新身份的角色扮演型艺术形式</div>
+				</div>
+			</div>
+		</div><!-- part9 end -->
+		<div class="part part10 next" id="part10">
+			<img src="images/logo.png" class="logo" />
+			<div class="content center_center_box">
+				<div>
+					<canvas width="750" height="892" id="res_img_canvas" style="width:100%;"></canvas>
+					<canvas width="750" height="1206" id="res_save_canvas" style="width:100%;"></canvas>
+					<div class="save_content">
+						<img src="" id="res_img" class="img" />
+						<img src="" id="res_save" class="save" />
+					</div>
+					<a href="http://www.glion.cn/programs/luxury-brand-management-hospitality/" class="btn">来<strong>Glion</strong>打开新奢界大门</a>
+					<!--<img src="images/save_tips.png" class="tips" />-->
+					<div class="share_btn" id="share_btn">分享</div>
+					<div class="save_ps">长按保存图片</div>
+				</div>
+
+			</div>
+
+		</div><!-- part10 end -->
+		<canvas class="step" id="step" width="592" height="30"></canvas>
+	</div>
+	<script type="text/javascript" src="js/func.js?201806041"></script>
+
+	<div id="overLay" class="overLay">
+		<img src="images/share_guide.png" class="share_guide" alt="">
+		<div class="tip_txts">把试卷发出去</div>
+	</div>
+</body>
+<script type="text/javascript">
+    var imgOk = 0,
+        totalImg=[],
+        loadingAnimationFrame,
+        loadingStep = 1,
+        curLoadingPos = 0,
+        totalLoadingPos = 0,
+        loadingDelay = 5,
+        loadingLastdate = 0,
+        src='images/';
+
+    var bgImg=new Array;
+    var triangleImg=new Array;
+    var attrArr=['a','b','c','d','e','f','g','h','i','j','k','l','m','n'];
+    for(let i=2; i<10;i++){
+        bgImg.push(src+'part'+i+'bg.jpg');
+	}
+    for(let i=0; i<attrArr.length;i++){
+        triangleImg.push(src+'res_'+attrArr[i]+'.png');
+    }
+    totalImg=bgImg.concat(triangleImg);
+
+    for(let i=0; i<totalImg.length; i++){
+        (function(index){
+            var img=new Image;
+            img.onload=function(){
+                imgOk++;
+                totalLoadingPos=parseInt((imgOk/totalImg.length)*100);
+                window.cancelAnimationFrame(requestAnimationFrame);
+                loadingAnimationFrame = window.requestAnimationFrame(function() {
+                    loadAnimation(new Date);
+                });
+            };
+            img.src = totalImg[index];
+        })(i);
+    }
+    function loadAnimation(date) {
+        if (date - loadingLastdate >= loadingDelay) {
+            curLoadingPos += loadingStep;
+            $('#process').html(curLoadingPos>=100?100+'%':curLoadingPos + '%' );
+            if (curLoadingPos == 100) {
+                window.cancelAnimationFrame(loadingAnimationFrame);
+                window.setTimeout(function() {
+                    $('#loading_section').hide();
+                    $('#layout').show();
+                }, 500);
+                return;
+            }
+            loadingLastdate = date;
+        }
+        if (curLoadingPos >= totalLoadingPos) window.cancelAnimationFrame(loadingAnimationFrame);
+        else {
+            loadingAnimationFrame = window.requestAnimationFrame(function() {
+                loadAnimation(new Date);
+            });
+        }
+    }
+</script>
+</html>
