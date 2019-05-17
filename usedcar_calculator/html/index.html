@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>斯堪尼亚二手车回购计算器</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <link rel="stylesheet" href="css/global.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+
+</head>
+<body>
+    <div id="calculator" class="calculator Data_layout">
+        <div class="herd_area">
+            <div class="header">
+                <img src="images/Scania.png" class="Scania" alt="">
+                <img src="images/Logo.png" class="Logo" alt="">
+                <h1 class="calculator_title">斯堪尼亚二手车回购计算器</h1>
+            </div>
+        </div>
+        <div class="content Data">
+            <form id="data_form" action="">
+                <div class="basic_area">
+                    <div class="area_title">
+                        <img src="images/basic.png" alt="">
+                        车辆基本信息
+                    </div>
+                    <div class="basic">
+                        <label class="basic_item">
+                            <div class="intro">车型</div>
+                            <select name="kind" id="kind_sel" class="item_data item_select" data-missing="请选择车型" v-model="dataArray.a1" @blur="checkForm(0)">
+                                <option value="" selected></option>
+                                <option v-for="item in tag" :value="item.model">{{item.model}}</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </label>
+                        <label class="basic_item">
+                            <div class="intro" :disabled="disableEmission">排放标准</div>
+                            <select name="emission" id="emission_sel" class="item_data item_select" data-missing="请选择排放标准" v-model="dataArray.a2" @blur="checkForm(1)" :disabled="disableEmission">
+                                <option value="" selected></option>
+                                <option v-for="item in emissionList" :value="item">{{item}}</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </label>
+                        <label class="basic_item">
+                            <div class="intro" :disabled="disableEmission">规格</div>
+                            <select name="specification" id="specification_sel" class="item_data item_select" data-missing="请选择规格" v-model="dataArray.a3" @blur="checkForm(2)" :disabled="disableSpecification">
+                                <option value="" selected></option>
+                                <option v-for="item in SpecificList" :value="item.txt">{{item.txt}}</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </label>
+                        <label class="basic_item">
+                            <div class="intro">二手车数量</div>
+                            <div class="unit">辆</div>
+                            <input type="text" name="number" id="number_inp" value="" class="item_data item_input" data-missing="请输入二手车数量，只限数字" maxlength="3" autocomplete="off" v-model.number="dataArray.a4" @blur="checkForm(3)">
+                            <div class="error-message"></div>
+                        </label>
+                        <label class="basic_item">
+                            <div class="intro">不可折旧的设备价值（选填）</div>
+                            <div class="unit">元/辆</div>
+                            <input type="text" name="keep_value" id="keepValue_inp" value="" class="item_data item_input" autocomplete="off" placeholder="0" maxlength="7" v-model.number="dataArray.a5" @blur="checkForm(4)">
+                            <div class="error-message"></div>
+                        </label>
+                        <label class="basic_item">
+                            <div class="intro">售价，含税</div>
+                            <div class="unit">元/辆</div>
+                            <input type="text" name="price" id="price_inp" value="" class="item_data item_input" data-missing="请输入含税售价，只限数字" data-wrong="售价不得小于设备价值" autocomplete="off" v-model.number="dataArray.a6" @blur="checkForm(5,)" maxlength="7">
+                            <div class="error-message"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="operation_area">
+                    <div class="area_title">
+                        <img src="images/operating.png" alt="">
+                        车辆运营信息
+                    </div>
+                    <div class="operation">
+                        <label class="basic_item">
+                            <div class="intro">服务合约</div>
+                            <select name="kind" id="maintain_sel" class="item_data item_select" data-missing="请选择服务合约" v-model.number="dataArray.a7" @blur="checkForm(6)">
+                                <option value="" selected></option>
+                                <option value="大包">大包</option>
+                                <option value="保养">保养</option>
+                                <option value="无">无</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </label>
+                        <label class="basic_item">
+                            <div class="intro">预计年均行驶里程</div>
+                            <div class="unit">公里/年</div>
+                            <input type="text" name="mile" id="mile_inp" value="" class="item_data item_input" placeholder="0~400000" data-missing="请输入预计年均行驶里程" autocomplete="off" maxlength="6" v-model.numebr="dataArray.a8" @blur="checkForm(7)">
+                            <div class="error-message"></div>
+                        </label>
+                        <label class="basic_item">
+                            <div class="intro">运输类型</div>
+                            <select name="pattern" id="pattern_sel" class="item_data item_select" data-missing="请选择运输类型" v-model="dataArray.a9" @blur="checkForm(8)">
+                                <option value="" selected></option>
+                                <option value="长途运输">长途运输</option>
+                                <option value="危险品">危险品</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </label>
+                        <label class="basic_item">
+                            <div class="intro">回购年限</div>
+                            <select name="pattern" id="time_sel" class="item_data item_select" data-missing="请选择回购年限" v-model="dataArray.a10" @blur="checkForm(9)">
+                                <option value="" selected></option>
+                                <option value="3">3年</option>
+                                <option value="4">4年</option>
+                                <option value="5">5年</option>
+                                <option value="6">6年</option>
+                                <option value="7">7年</option>
+                                <option value="8">8年</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="calculate_btn" class="calculate_btn" @click="checkForm(9)">查看结果</div>
+            </form>
+        </div>
+        <div class="content Result">
+            <div class="result_area">
+                <div class="result_text">
+                    <div class="title_result">估价结果</div>
+                    <div class="txt_result">您的一辆车估价为 <span class="num_result rollnumber" id="as_price">0</span> <span class="colored">元，</span>残值高达 <span class="num_result rollnumber" id="percent">0</span><span class="percent_icon">%</span></div>
+                    <div class="txt_result" v-if="dataArray.a4>1">您 {{dataArray.a4}} 辆二手车总估价为 <span class="num_result">{{totalPrice}}</span> <span class="colored">元</span></div>
+                </div>
+                <canvas width="559" height="559" class="result_graph" id="result_graph"></canvas>
+            </div>
+            <div class="cta_area">
+                <div class="re_calculate" @click="reCalculate()">再来一次</div>
+                <div class="save_result" @click="savePage()">保存该结果页</div>
+            </div>
+
+            <div class="car_info">
+                <div class="info_title">二手车辆信息</div>
+                <div class="car_basic">
+                    <div class="info_guide">车辆基本信息</div>
+                    <ul class="info_list">
+                        <li class="info_item">
+                            <div class="item_name">车型</div>
+                            <div class="item_info">{{dataArray.a1}}</div>
+                        </li>
+                        <li class="info_item">
+                            <div class="item_name">排放标准</div>
+                            <div class="item_info">{{dataArray.a2}}</div>
+                        </li>
+                        <li class="info_item">
+                            <div class="item_name">二手车数量</div>
+                            <div class="item_info">{{dataArray.a4}}</div>
+                        </li>
+                        <li class="info_item" v-if="dataArray.a5">
+                            <div class="item_name">不可折旧的设备价值</div>
+                            <div class="item_info">{{dataArray.a5}}</div>
+                        </li>
+                        <li class="info_item">
+                            <div class="item_name">售价，含税</div>
+                            <div class="item_info">{{dataArray.a6}}</div>
+                        </li>
+                        <li class="info_item ps_info">
+                            <div class="item_name">规格</div>
+                            <div class="item_info">{{dataArray.a3}}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="car_info">
+                <div class="car_operation">
+                    <div class="info_guide">车辆运营信息</div>
+                    <ul class="info_list">
+                        <li class="info_item">
+                            <div class="item_name">服务合约</div>
+                            <div class="item_info">{{dataArray.a7}}</div>
+                        </li>
+                        <li class="info_item">
+                            <div class="item_name">预计年均行驶里程</div>
+                            <div class="item_info">{{dataArray.a8}}</div>
+                        </li>
+                        <li class="info_item">
+                            <div class="item_name">运输类型</div>
+                            <div class="item_info">{{dataArray.a9}}</div>
+                        </li>
+                        <li class="info_item">
+                            <div class="item_name">回购年限</div>
+                            <div class="item_info">{{dataArray.a10}}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup resultlink" id="rsLinkPopup">
+            <div class="center_center_box center_center_box_mb">
+                <div class="panel">
+                    <div class="text">结果页网页链接</div>
+                    <input type="text" value="1" id="rsLink" readonly />
+                    <div class="btn copyBtn"  data-clipboard-target="#rsLink" @click="copyLink()">复制<div class="tips"></div></div>
+                    <div class="btn" @click="closeRsLinkPopup()">关闭</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<script>
+        var inputStr='{"a1":"G410","a2": "国五","a3": "A6x4NA 20N Opc RET White 3.07 disc 3.35m 400W FL","a4": 4,"a5": 5,"a6": 603000,"a7": "7","a8": "无","a9": 300000,"a10": "长途运输","a11": 3}'
+    </script>-->
+    <script src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+</body>
+</html>

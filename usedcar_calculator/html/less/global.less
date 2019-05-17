@@ -1,0 +1,455 @@
+@import "_basic";
+@imagePath:'../images/';
+
+html{
+  font-size: 20px;
+  color: #fff;
+}
+img{width: auto;}
+.colored{color: #d6001c;}
+.calculator{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 1px;
+}
+.Data_layout{
+  background:url('@{imagePath}page_bg.jpg') no-repeat top center #000;
+  background-size: 100%;
+}
+.Result_layout{
+  background:url('@{imagePath}result_bg.png') no-repeat top center #000;
+  background-size: 100%;
+  padding-bottom: 2rem;
+}
+.herd_area{
+  padding: 2% 0;
+  .header{
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .Scania{
+      width: 170px;
+    }
+    h1{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 1.45rem;
+      font-weight: bold;
+    }
+  }
+}
+.content{
+  width: 68%;
+  margin: 0 auto;
+}
+.Data{
+  .area_title{
+    img{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    text-align: center;
+    font-size: 1.45rem;
+    margin: 1rem 0;
+  }
+  .basic,.operation{
+    overflow: hidden;
+    .basic_item{
+      width: 43%;
+      float: left;
+      margin-left: 14%;
+      margin-bottom: 1rem;
+      position: relative;
+      &:nth-child(2n-1){margin-left: 0;}
+      .intro{
+        font-size: 1rem;
+      }
+      .intro[disabled]{color: #999;}
+      .item_data{
+        width: 100%;
+        height: 2rem;
+        color: #adadad;
+        font-size: 0.8rem;
+        line-height: 2rem;
+        .setbox;
+        border: solid 1px #fff;
+        margin-top: 0.2rem;
+        padding: 0 0.4rem;
+      }
+      .item_select{
+        /*很关键：将默认的select选择框样式清除*/
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        background: #161616 url("@{imagePath}dropArrow.png") no-repeat 98% 50%;
+        background-size: 25px;
+        option{
+          background: #fff;
+        }
+      }
+      select[disabled]{
+        border: solid 1px #999;
+        background: #161616 url("@{imagePath}dropArrowGrey.png") no-repeat 98% 50%;
+     }
+      .item_input{
+        background: #161616;
+      }
+      .unit{
+        font-size: 0.8rem;
+        position: absolute;
+        right: 0.4rem;
+        bottom: 0.5rem;
+        color: #adadad;
+      }
+      .error-message{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        .transform(translateY(100%));
+        font-size: 0.6rem;
+        color: red;
+      }
+    }
+    .textarea_item{
+      width: 100%;
+      .ps_text{
+        background: #161616;
+        height: 3rem;
+        resize: none;
+        line-height: 160%;
+      }
+    }
+    .ps_text::-webkit-input-placeholder{
+      color: #adadad;
+      line-height: 160%;
+    }    /* 使用webkit内核的浏览器 */
+    .ps_text:-moz-placeholder{
+      color: #adadad;
+      line-height: 160%;
+    }                  /* Firefox版本4-18 */
+    .ps_text::-moz-placeholder{
+      color: #adadad;
+      line-height: 160%;
+    }                  /* Firefox版本19+ */
+    .ps_text:-ms-input-placeholder{
+      color: #adadad;
+      line-height: 160%;
+    }           /* IE浏览器 */
+  }
+  .calculate_btn{
+    width: 10rem;
+    padding: 1.4rem;
+    background: url("@{imagePath}btn_background.png") no-repeat center center;
+    background-size: 100% 100%;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: center;
+    margin: 1.5rem auto;
+    cursor: pointer;
+  }
+}
+.Result{
+  width: 88%;
+  display: none;
+  .result_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .result_text{
+      .title_result{
+        font-size: 2.7rem;
+      }
+      .txt_result{
+        margin-top: 0.7rem;
+        font-size: 1.5rem;
+      }
+      .num_result{
+        display: inline-block;
+        font-size: 2.2rem;
+        .colored;
+      }
+      .percent_icon{
+        display: inline-block;
+        font-size: 2.2rem;
+        .colored;
+        vertical-align: bottom;
+        .transform(translateY(5%));
+      }
+    }
+  }
+  .cta_area{
+    overflow: hidden;
+    width: 55%;
+    margin: 2rem auto;
+    div{
+      width: 10rem;
+      padding: 1.4rem;
+      background: url("@{imagePath}btn_background.png") no-repeat center center;
+      background-size: 100% 100%;
+      font-size: 1.1rem;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+    }
+    .re_calculate{
+      float: left;
+    }
+    .save_result{
+      float: right;
+    }
+  }
+  .car_info{
+    border-top: solid 1px #a6a6a6;
+    padding-top: 1.2rem;
+    margin-top: 1.2rem;
+    .info_title{
+      font-size: 1.4rem;
+      text-align: center;
+    }
+    .info_guide{
+      margin-top: 0.4rem;
+      position: relative;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #d3d3d3;
+      .setbox;
+      padding-left: 0.7rem;
+      &::before{
+        content: '';
+        width: 5px;
+        height: 1.2rem;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        .transform(translateY(-50%));
+        background: #fff;
+      }
+    }
+    .info_list{
+      overflow: hidden;
+      line-height: 100%;
+      margin-top: 0.3rem;
+      .info_item{
+        width: 48%;
+        float: left;
+        margin-left: 4%;
+        overflow: hidden;
+        margin-top: 0.7rem;
+        font-size: 1rem;
+        &:nth-child(2n-1){margin-left: 0;}
+        .item_name{
+          text-align: right;
+          color: #b4b4b4;
+          width: 40%;
+          float: left;
+        }
+        .item_info{
+          .setbox;
+          padding-left: 1rem;
+          float: left;
+          width: 60%;
+        }
+      }
+      .ps_info{
+        width: 100%;
+        margin-left: 0;
+        .item_name{width: 19.2%}
+        .item_info{width: 80.8%}
+      }
+    }
+  }
+}
+
+.rollnumber {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 100%;
+
+  span {
+    line-height: 10%;
+  }
+}
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+
+  .panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .transform(translate(-50%, -50%));
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      z-index: 2;
+      cursor: pointer;
+      .transform(translate(0, -100%));
+    }
+  }
+}
+.resultlink {
+  .panel {
+    max-width: 1440px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+  }
+
+  input {
+    display: block;
+    width: 60%;
+    margin: 3% auto 4%;
+    font-size: 1.2rem;
+    padding: 1%;
+  }
+
+  .btn {
+    position: relative;
+    margin: 0 3%;
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1% 0;
+    color: #fff;
+    background-color: #d6001c;
+    cursor: pointer;
+
+    .tips {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      font-size: 0.66em;
+      text-align: center;
+      opacity: 0;
+      .transition(all 0.5s);
+      .transform(translate(0, 105%));
+    }
+  }
+}
+
+@media screen and (max-width: 750px){
+  html{font-size: 3.75vw}
+  .herd_area{
+    .header{
+      justify-content: center;
+      .Scania{
+        width: 10rem;
+        display: none;
+      }
+      .Logo{width: 3rem;}
+      h1{top:3.9rem;}
+    }
+  }
+  .content{width: 92%}
+  #data_form{margin-top: 4rem}
+  .Data{
+    .area_title{
+      img{width: 3rem;}
+    }
+    .basic,.operation{
+      .basic_item{
+        width: 100%;
+        margin-left: 0;
+        .item_select{
+          background-size: 16px;
+          background-position: 97% 50%;
+        }
+      }
+      .textarea_item{
+        width: 100%;
+      }
+    }
+    .calculate_btn{margin: 1rem auto;}
+  }
+  .Result{
+    margin-top: 1rem;
+    .result_area{
+      .result_graph{width: 45%}
+      .result_text{
+        .title_result{font-size: 1.8rem;}
+        .txt_result{
+          font-size: 1rem;
+          margin-top: 0.2rem;
+        }
+        .num_result{font-size: 1.8rem}
+        .percent_icon{
+          font-size: 1.8rem;
+          .transform(translateY(9%));
+        }
+      }
+    }
+    .cta_area{
+      width: 90%;
+      margin: 1.5rem auto;
+      div{
+        padding: 1.2rem;
+        font-size: 0.9rem;
+        width: 7rem;
+      }
+    }
+    .car_info{
+      .info_list{
+        .info_item{
+          float: none;
+          margin-left: 0;
+          width: 100%;
+          display: flex;
+        }
+        .ps_info{
+          .item_name{width: 40%;}
+          .item_info{width: 60%;}
+        }
+      }
+    }
+  }
+
+  .center_center_box_mb {
+    width: 100%;
+    height: 100%;
+    .display_box();
+    .box_position(center, center);
+  }
+  .resultlink {
+    .panel {
+      position: static;
+      .transform(translate(0, 0));
+    }
+    input {
+      width: 80%;
+      margin: 6% auto 8%;
+      padding: 2%;
+    }
+    .btn {
+      width: 30%;
+      padding: 2% 0;
+    }
+  }
+}
