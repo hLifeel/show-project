@@ -1,0 +1,114 @@
+@import "../css/animate.min.css";
+
+#animation(@animation_kind){
+  -webkit-animation:@animation_kind;
+  -moz-animation:@animation_kind;
+  -o-animation:@animation_kind;
+  -ms-animation:@animation_kind;
+  animation:@animation_kind;
+}
+.keyframe_more(@name,@1,@2,@3,@4,@5){
+  @-webkit-keyframes @name{
+    0% {-webkit-transform:@1;}
+    25% {-webkit-transform:@2;}
+    50% {-webkit-transform:@3;}
+    75% {-webkit-transform:@4;}
+    100% {-webkit-transform:@5;}
+  }
+  @-moz-keyframes @name{
+    0% {-moz-transform:@1;}
+    25% {-moz-transform:@2;}
+    50% {-moz-transform:@3;}
+    75% {-moz-transform:@4;}
+    100% {-moz-transform:@5;}
+  }
+  @-o-keyframes @name{
+    0% {-o-transform:@1;}
+    25% {-o-transform:@2;}
+    50% {-o-transform:@3;}
+    75% {-o-transform:@4;}
+    100% {-o-transform:@5;}
+  }
+  @-ms-keyframes @name{
+    0% {-ms-transform:@1;}
+    25% {-ms-transform:@2;}
+    50% {-ms-transform:@3;}
+    75% {-ms-transform:@4;}
+    100% {-ms-transform:@5;}
+  }
+  @keyframes @name{
+    0% {transform:@1;}
+    25% {transform:@2;}
+    50% {transform:@3;}
+    75% {transform:@4;}
+    100% {transform:@5;}
+  }
+}
+
+.setAnimate(@duration,@delay){
+  animation-duration: @duration;    //动画持续时间
+  animation-delay: @delay;    //动画延迟时间
+}
+.title_area{
+  .setAnimate(1s,0)
+}
+.product_display{
+  .setAnimate(1s,0)
+}
+
+.keyframe_more(@name,@1,@2,@3,@4,@5){
+  @-webkit-keyframes @name{
+    0% {-webkit-transform:@1;}
+    25% {-webkit-transform:@2;}
+    50% {-webkit-transform:@3;}
+    75% {-webkit-transform:@4;}
+    100% {-webkit-transform:@5;}
+  }
+  @-moz-keyframes @name{
+    0% {-moz-transform:@1;}
+    25% {-moz-transform:@2;}
+    50% {-moz-transform:@3;}
+    75% {-moz-transform:@4;}
+    100% {-moz-transform:@5;}
+  }
+  @-o-keyframes @name{
+    0% {-o-transform:@1;}
+    25% {-o-transform:@2;}
+    50% {-o-transform:@3;}
+    75% {-o-transform:@4;}
+    100% {-o-transform:@5;}
+  }
+  @-ms-keyframes @name{
+    0% {-ms-transform:@1;}
+    25% {-ms-transform:@2;}
+    50% {-ms-transform:@3;}
+    75% {-ms-transform:@4;}
+    100% {-ms-transform:@5;}
+  }
+  @keyframes @name{
+    0% {transform:@1;}
+    25% {transform:@2;}
+    50% {transform:@3;}
+    75% {transform:@4;}
+    100% {transform:@5;}
+  }
+}
+
+.keyframe_more(homearrow,translateY(40%),translateY(15%),translateY(-10%),translateY(15%),translateY(40%));
+.guide_arrow{
+  #animation(homearrow 1s linear infinite);
+}
+
+.keyframe_more(moveFinger,translateX(10%),translateX(0),translateX(-10%),translateX(0),translateX(10%));
+.fingerPoint{
+  #animation(moveFinger 1s linear infinite);
+}
+
+.keyframe_more(NewrightArrow,translateX(20%),translateX(0),translateX(-20%),translateX(0),translateX(20%));
+.page3_swipe1_nav{
+  #animation(NewrightArrow 1.5s linear infinite);
+}
+.keyframe_more(NewleftArrow,translateX(20%),translateX(0),translateX(-20%),translateX(0),translateX(20%));
+.page3_swipe2_nav{
+  #animation(NewleftArrow 1.5s linear infinite);
+}

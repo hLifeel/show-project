@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>歷史記憶庫 - 我的傳家寶</title>
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <meta name="applicable-device" content="pc,mobile"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"
+          name="viewport">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <link rel="stylesheet" href="css/global.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+</head>
+<body>
+<div id="layout" class="layout news_layout">
+    <script type="text/javascript" src="js/nav.js"></script>
+
+    <div class="kv_wrap" id="kv_wrap">
+        <div class="swiper-container kv_slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide kv_slide_item">
+                    <img class="kv_image" src="images/heirloom_banner.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div><!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+        </div>
+    </div>
+    <!--end kv_wrap-->
+    <div class="heirloom_list" id="heirloom_list">
+        <div class="section_intro">
+            駁雜歷史的殘痕記憶，那些積塵的皮箱、臨別的信物、泛黃的照片、家書上的娟秀字跡，蜿蜒成鄉愁的情節，揭露時代的身世。看似尋常的一件件、一樁樁，卻承載著人與環境的百轉千迴，封存彼此最貼身不捨的過往，具體而微地將主人曾經的風華與滄桑重做一次打量。傳家物件沉默探照故人歷史，不讓祖輩故事境遷時移。這些身外之物微妙地牽繫起過去、現在與未來，成為生命最具體的見證。
+        </div>
+        <div class="float_content_wrap">
+            <img src="images/pc_paper.png" class="home_news_bg pc" alt="">
+            <img src="images/mobile_paper.png" class="mobile" alt="">
+            <div class="float_content heirloom_list_content">
+                <div class="tab_wrap">
+                    <ul class="list_tab">
+                        <li class="tab_item active">思親懷鄉</li>
+                        <li class="tab_item">時代印記</li>
+                        <li class="tab_item">移途征旅</li>
+                    </ul>
+                </div>
+                <div class="tab_content">
+                    <ul class="tab_content_item museum_list active">
+                        <li class="museum_item">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="tab_content_item museum_list">
+                        <li class="museum_item">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="tab_content_item museum_list">
+                        <li class="museum_item">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="museum_item pc">
+                            <div class="museum_item_wrap">
+                                <div class="museum_item_profile">
+                                    <a href="heirloom_detail.html" class="museum_photo_cta">
+                                        <img src="images/heirloom_profile.jpg" class="museum_photo" alt="">
+                                    </a>
+                                    <div class="museum_title">
+                                        <span class="item_name">門牌</span>
+                                        <span class="item_time">70年代</span>
+                                    </div>
+                                </div>
+                                <div class="museum_des">
+                                    <div class="museum_des_info">
+                                        生命如同一汩流水<br>
+                                        它流到了哪兒  我就在哪兒
+                                    </div>
+                                    <div class="section_cta">
+                                        <a href="heirloom_detail.html" class="cta_btn museum_cta">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="section_cta">
+                    <div class="pagination" id="news_list_pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end list_news-->
+
+    <script type="text/javascript" src="js/footer.js"></script>
+</div>
+
+<script type="text/javascript" src="js/func.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("body").preSelectNav("我的傳家寶");
+
+        if(IsPC()){
+            $('.pagination').pagination(39, {
+                items_per_page: 4,
+                num_display_entries: 5,
+                prev_text: " ",
+                next_text: " ",
+                ellipse_text: "...",
+                num_edge_entries: 1
+            });
+        }else{
+            $('.pagination').pagination(39, {
+                items_per_page: 2,
+                num_display_entries: 5,
+                prev_text: " ",
+                next_text: " ",
+                ellipse_text: "...",
+                num_edge_entries: 1
+            });
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,1809 @@
+@import "_basic";
+@import "_customAnimate";
+@import "../css/swiper-bundle.min.css";
+@import "../css/pagination.css";
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  font-family: Microsoft JhengHei, '微軟正黑體', Arial, sans-serif;
+  &.none_scroll {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.hide {
+  display: none !important;
+}
+
+.mobile {
+  display: none;
+}
+
+.float_content {
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  z-index: 10;
+  .transform(translate(-50%, 0));
+  .section_title {
+    margin: 0 auto;
+  }
+}
+
+.cta_btn {
+  padding: 1% 4% 1% 1%;
+  background: url("@{imagePath}cta_arrow.png") no-repeat, #f2c768;
+  background-position: 92% center;
+  background-size: 0.85rem;
+  color: #754e42;
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+
+.section_cta {
+  width: 100%;
+  text-align: center;
+  .cta_btn {
+    display: inline-block;
+  }
+}
+
+.layout {
+  width: 100%;
+}
+
+/*首页*/
+.nav {
+  background: #fffcee;
+  width: 100%;
+  .boxForm;
+  display: flex;
+  justify-content: start;
+  align-items: stretch;
+  font-size: 1.05rem;
+  padding-right: 0;
+  .logo {
+    width: 10.5%;
+    padding: 0.5% 1%;
+  }
+  .nav_wrap {
+    width: 89.5%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    .nav_list {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      .nav_item {
+        margin-left: 5rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: center;
+        letter-spacing: 0.2rem;
+        line-height: 150%;
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+        a {
+          color: #000;
+          display: block;
+          width: 100%;
+        }
+        span {
+          display: block;
+          font-size: 0.75rem;
+          letter-spacing: 0;
+        }
+      }
+    }
+    .sub_nav {
+      display: none;
+      position: absolute;
+      background: #fffbed;
+      width: 260%;
+      left: 50%;
+      top: 100%;
+      z-index: 10;
+      text-align: center;
+      .transform(translate(-50%, 0));
+      .sub_nav_item {
+        line-height: 135%;
+        width: 90%;
+        margin: 0 auto;
+        padding: 5% 0;
+        border-top: solid 1px #f4ebd6;
+        &:last-child {
+          border-bottom: solid 1px #f4ebd6;
+        }
+        a {
+          color: #754e42;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background: #ea7b49;
+  text-align: center;
+  color: #fff;
+  padding: 2% 0;
+  .footer_content {
+    margin-bottom: 1%;
+    line-height: 180%;
+    font-size: 0.8rem;
+  }
+  .fbicon {
+    width: 1.5rem;
+    margin: 0 auto;
+    margin-top: 1.5%;
+  }
+}
+
+.kv_wrap {
+  width: 100%;
+  .kv_slide {
+    --swiper-theme-color: #fff;
+    .swiper-pagination-bullet {
+      width: 0.75rem;
+      height: 0.75rem;
+      margin: 0 0.6rem;
+    }
+  }
+  .kv_link {
+    display: block;
+    width: 100%;
+  }
+}
+
+.home_news {
+  width: 100%;
+  position: relative;
+  .home_news_content {
+    width: 60%;
+    .home_news_title {
+      width: 9.2rem;
+    }
+    .news_list {
+      margin-top: 7.5%;
+      .news_item {
+        margin-bottom: 1.7%;
+        padding-bottom: 1.7%;
+        border-bottom: solid 1px #000;
+        display: flex;
+        align-content: stretch;
+        justify-content: space-between;
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+        .homeNews_img {
+          width: 29%;
+          height: auto;
+        }
+        .homeNews_detail {
+          width: 69%;
+          position: relative;
+          .news_item_title {
+            font-size: 1.25rem;
+            color: #fff;
+            background: #ea7b49;
+            padding: 0.4rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 65%;
+          }
+          .news_item_time {
+            font-size: 0.8rem;
+            color: #563f3a;
+            margin: 1% 0;
+          }
+          .news_item_des {
+            font-size: 1rem;
+            color: #161616;
+            .display_box;
+            .boxOverflow(2);
+          }
+          .news_item_cta {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+          }
+        }
+      }
+    }
+    .more_news_cta {
+      padding-right: 3%;
+    }
+  }
+}
+
+.home_story {
+  position: relative;
+  .home_story_content {
+    .home_story_title {
+      width: 9.2rem;
+    }
+  }
+}
+
+.home_museum {
+  position: relative;
+  .home_museum_content {
+    width: 100%;
+    .home_museum_title {
+      width: 11.7rem;
+    }
+    .home_museumDetail {
+      margin-top: 2%;
+      width: 100%;
+      .museum_list {
+        width: 88%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: center;
+        .museum_item {
+          margin-bottom: 1.6%;
+          margin-left: 2.4%;
+          &:first-child {
+            margin-left: 0;
+          }
+          background: url("@{imagePath}homeMuseum_border.png") no-repeat;
+          background-size: 100% 100%;
+          background-position: center center;
+          padding: 1.7% 2.2%;
+          width: 27%;
+          .museum_item_wrap {
+            .museum_item_profile {
+              position: relative;
+              .museum_title {
+                padding: 2% 5%;
+                background: #ea7b49;
+                color: #fff;
+                font-size: 1.25rem;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                z-index: 10;
+              }
+            }
+            .museum_des {
+              background: #fffcf9;
+              font-size: 1rem;
+              .boxForm;
+              width: 100%;
+              padding: 3% 4%;
+              line-height: 160%;
+              position: relative;
+              .museum_des_info {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 65%;
+              }
+              .museum_cta {
+                position: absolute;
+                right: 4%;
+                bottom: 20%;
+                z-index: 10;
+                padding: 0.1rem 7% 0.1rem 1%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.home_live {
+  position: relative;
+  .home_live_content {
+    width: 71.5%;
+    .home_live_title {
+      width: 11.7rem;
+    }
+    .live_wrap {
+      display: inline-block;
+      margin-top: 3%;
+      background: url("@{imagePath}home_tele_bg.png") center center;
+      background-size: 100% 100%;
+      width: 100%;
+      padding-top: 5.5%;
+      padding-bottom: 5%;
+      .display_box;
+      .box_position(center, center);
+      .live_box {
+        margin-top: -2.2%;
+      }
+    }
+    .live_history {
+      margin-top: 1%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      .home_past_live {
+        width: 14%;
+      }
+      .past_list_wrap {
+        width: 84%;
+        background: url("@{imagePath}home_photobg.png") center center;
+        background-size: 100% 100%;
+        padding: 2% 0;
+        .past_list {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          .past_item {
+            width: 15.5%;
+            position: relative;
+            border-radius: 10px;
+            .live_time {
+              position: absolute;
+              padding: 1%;
+              background: #513d2e;
+              color: #fff;
+              font-size: 0.6rem;
+              bottom: 0;
+              right: 0;
+              z-index: 10;
+              border-radius: 0 0 10px 0;
+            }
+          }
+        }
+      }
+    }
+    .view_more_live {
+      margin-top: 1.5rem;
+      padding: 0.5%;
+      padding-right: 2.5%;
+      background-position: 96% center;
+    }
+  }
+}
+
+/*最新消息列表页*/
+.tab_wrap {
+  text-align: center;
+  .list_tab {
+    display: inline-block;
+    overflow: hidden;
+    .tab_item {
+      padding: 0.8rem 1rem;
+      color: #754e42;
+      font-size: 1.25rem;
+      border: solid 1px #754e42;
+      float: left;
+      margin-left: 4.25rem;
+      background: #fffdfa;
+      cursor: pointer;
+      &:nth-child(1) {
+        margin-left: 0
+      }
+      &.active {
+        background: #f2c768;
+        border: solid 1px #f2c768;
+      }
+    }
+  }
+}
+.list_news {
+  width: 100%;
+  position: relative;
+  .home_news_content {
+    width: 60%;
+    top: 7.5rem;
+    .news_list {
+      margin-top: 4.2%;
+      display: none;
+      &.active {
+        display: block;
+      }
+      .news_item {
+        margin-bottom: 1.7%;
+        padding-bottom: 1.7%;
+        border-bottom: solid 1px #000;
+        display: flex;
+        align-content: stretch;
+        justify-content: space-between;
+        &:last-child {
+          margin-bottom: 0;
+          border-bottom: none;
+        }
+        .news_item_img_cta{
+          width: 29%;
+          .homeNews_img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .homeNews_detail {
+          width: 69%;
+          position: relative;
+          .news_item_title {
+            display: block;
+            font-size: 1.25rem;
+            color: #fff;
+            background: #ea7b49;
+            padding: 0.4rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 65%;
+          }
+          .news_item_time {
+            font-size: 0.8rem;
+            color: #563f3a;
+            margin: 1% 0;
+          }
+          .news_item_des {
+            font-size: 1rem;
+            color: #161616;
+            .display_box;
+            .boxOverflow(2);
+          }
+          .news_item_cta {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+          }
+        }
+      }
+    }
+    .more_news_cta {
+      padding-right: 3%;
+    }
+  }
+}
+.pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span, a {
+    border: none;
+    font-size: 0.7rem;
+    color: #97796f;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    background: #f2c768;
+    border-radius: 50px;
+    padding: 0;
+  }
+  .current {
+    background: #97796f;
+    color: #fff;
+  }
+  .next, .prev {
+    border: none;
+    background: none;
+  }
+  .prev, .current.prev {
+    background: url("@{imagePath}page_left.png") no-repeat center center;
+    background-size: 60%;
+  }
+  .next, .current.next {
+    background: url("@{imagePath}page_right.png") no-repeat center center;
+    background-size: 60%;
+  }
+}
+
+/*傳家寶*/
+.section_intro {
+  font-size: 1.15rem;
+  color: #161616;
+  line-height: 170%;
+  width: 57%;
+  margin: 0 auto;
+  padding: 3.5% 0;
+}
+.heirloom_list {
+  width: 100%;
+  background: url("@{imagePath}content_bg_pc.jpg") top center repeat-y;
+  background-size: 100%;
+  padding-bottom: 5%;
+  .float_content_wrap {
+    width: 83%;
+    margin: 0 auto;
+    position: relative;
+    .heirloom_list_content {
+      width: 100%;
+      top: 2.8rem;
+      .tab_content {
+        margin-top: 3rem;
+        .museum_list {
+          display: none;
+          width: 83.5%;
+          margin: 0 auto;
+          overflow: hidden;
+          &.active {
+            display: block;
+          }
+          .museum_item {
+            width: 31%;
+            margin-left: 3.5%;
+            float: left;
+            margin-bottom: 2%;
+            &:nth-child(3n+1) {
+              margin-left: 0;
+            }
+            .museum_item_wrap {
+              .museum_item_profile {
+                .museum_title {
+                  padding: 1% 3.5%;
+                  background: #916646;
+                  display: flex;
+                  align-items: flex-end;
+                  justify-content: space-between;
+                  color: #fff;
+                  .item_name {
+                    font-size: 1.25rem;
+                  }
+                  .item_time {
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+              .museum_des {
+                background: #fffcf9;
+                font-size: 1rem;
+                .boxForm;
+                width: 100%;
+                padding: 3% 2% 2% 4%;
+                line-height: 160%;
+                .museum_des_info {
+                  width: 100%;
+                  .display_box;
+                  .boxOverflow(2);
+                }
+                .section_cta {
+                  margin-top: 0.4rem;
+                  text-align: right;
+                  .museum_cta {
+                    padding-right: 8%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*傳家寶內頁*/
+.bg_content{
+  width: 100%;
+  background: url("@{imagePath}content_bg_pc.jpg") top center repeat-y;
+  background-size: 100%;
+}
+.heirloom_detail_content{
+  padding: 5% 0;
+  .bg_content_wrap{
+    width: 59%;
+    margin: 0 auto;
+    .detail_title{
+      background: #916646;
+      text-align: center;
+      color: #fffefd;
+      font-size: 1.5rem;
+      padding: 1% 0;
+    }
+    .detail_slide_wrap{
+      --swiper-navigation-color: #fff;/* 单独设置按钮颜色 */
+      --swiper-navigation-size: 1.5rem;/* 设置按钮大小 */
+    }
+    .detail_slogan{
+      background: #fffcf9;
+      padding: 1.5% 0;
+      color: #161616;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .heirloom_detail_intro{
+      font-size: 1rem;
+      color: #161616;
+      line-height: 160%;
+      padding-top: 3.5%;
+    }
+    .border-separate{
+      margin: 3% 0;
+      border-bottom: solid 1px #947567;
+    }
+    .heirloom_more_detail{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      font-size: 1rem;
+      &.mobile{display: none;}
+      .more_detail_item{
+        padding-left: 2.3%;
+      }
+      .category{
+        background: url("@{imagePath}icon/favourite_icon.png") no-repeat left center;
+        background-size: 1.2rem;
+      }
+      .time{
+        background: url("@{imagePath}icon/time_icon.png") no-repeat left center;
+        background-size: 1.2rem;
+      }
+      .provide{
+        background: url("@{imagePath}icon/heart_icon.png") no-repeat left center;
+        background-size: 1.2rem;
+      }
+      .owner{
+        background: url("@{imagePath}icon/person_icon.png") no-repeat left center;
+        background-size: 1.2rem;
+      }
+      .identify{
+        background: url("@{imagePath}icon/id_icon.png") no-repeat left center;
+        background-size: 1.2rem;
+      }
+      .location{
+        background: url("@{imagePath}icon/location_icon.png") no-repeat left center;
+        background-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/*花美男*/
+.glory_list {
+  .float_content_wrap {
+    .float_content {
+      .tab_content {
+        margin-top: 1rem !important;
+        .museum_list {
+          width: 81%;
+          display: block !important;
+          .museum_item {
+            .museum_item_wrap {
+              .museum_des {
+                position: relative;
+                .museum_des_info {
+                  .boxOverflow(3);
+                }
+                .museum_cta {
+                  position: absolute;
+                  padding-right: 8%;
+                  z-index: 10;
+                  right: 1%;
+                  bottom: 1%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .pagination {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+/*花美男内页*/
+.glory_detail_content{
+  padding: 5% 0;
+  .bg_content_wrap{
+    width: 72%;
+    margin: 0 auto;
+    .glory_profile_wrap{
+      margin-top: 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .glory_profile{
+        background: url("@{imagePath}person_photo.png") no-repeat center center;
+        background-size: 100% 100%;
+        padding: 3.9% 3.8%;
+        width: 56%;
+        .boxForm;
+      }
+      .glory_info{
+        width: 40%;
+        .info_title{
+          background: #916646;
+          padding: 1% 3%;
+          font-size: 1.5rem;
+          color: #fffdfc;
+          display: inline-block;
+        }
+        .info_list{
+          margin: 4% 0;
+          font-size: 1rem;
+          line-height: 150%;
+          .name{font-weight: bold;}
+        }
+        .border-separate{
+          margin: 4% 0;
+          border-bottom: solid 1px #947567;
+        }
+        .info_detail{
+          font-size: 1rem;
+          color: #161616;
+          line-height: 160%;
+        }
+      }
+    }
+    .single_title_img{
+      width: 7.7rem;
+      margin: 0 auto;
+      margin-top: 7%;
+    }
+    .more_item_slide_wrap{
+      margin-top: 4%;
+      background: url("@{imagePath}more_item_bg.png") no-repeat center center;
+      background-size: 100% 100%;
+      padding: 2.5% 0;
+      position: relative;
+      .swiper-button-prev{
+        left: 2rem;
+      }
+      .swiper-button-next{
+        right: 2rem;
+      }
+      --swiper-theme-color: #d5bc9f;/* 设置Swiper风格 */
+      --swiper-navigation-size: 2rem;/* 设置按钮大小 */
+      .more_item_slide{
+        width: 87%;
+        margin: 0 auto;
+        .more_item_slide_image{
+          border: solid 2px #d5bc9f;
+          .boxForm;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.popup{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background: rgba(117,78,66,0.7);
+  .poup_content_wrap{
+    width: 56.5%;
+    height: 80%;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    .transform(translate(-50%,-50%));
+    .boxForm;
+    padding: 3% 2%;
+    background: #fff;
+    .close{
+      position: absolute;
+      width: 1.2rem;
+      right: 1%;
+      top: 2%;
+      cursor: pointer;
+    }
+    .poup_content{
+      padding: 0 1%;
+      height: 100%;
+      overflow: auto;
+      .poup_content_title{
+        margin-top: 3%;
+        background: #916646;
+        padding: 1% 3%;
+        font-size: 1.5rem;
+        color: #fffdfc;
+        display: inline-block;
+      }
+      .poup_content_resoure{
+        margin: 3% 0;
+        font-size: 1rem;
+      }
+      .border-separate{
+        margin: 3% 0;
+        border-bottom: solid 1px #947567;
+      }
+      .popup_content_info{
+        font-size: 1rem;
+        color: #161616;
+        line-height: 160%;
+      }
+    }
+  }
+}
+
+/*遷臺軌跡*/
+.track_page {
+  .float_content_wrap {
+    width: 75%;
+    margin: 0 auto;
+    background-image: url("@{imagePath}pc_paper_01.png"), url("@{imagePath}pc_paper_03.png"), url("@{imagePath}pc_paper_02.png");
+    background-repeat:no-repeat, no-repeat,no-repeat;
+    background-position: top center, bottom center,center center;
+    background-size: 100% auto, 100% auto, 100% 90%;
+    padding: 3% 0;
+    .heirloom_list_content {
+      .tab_content {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 2%;
+        .tab_content_item{
+          .track_icon{
+            width: 5%;
+            margin: 0 auto;
+            &.taiwan{margin-top: -1.5%;}
+          }
+          .track_wrap{
+            width: 100%;
+            height: 47rem;
+            overflow: hidden;
+            margin-top: -1%;
+            .track_ing{
+              float: left;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .track_milestone{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .milestone_info{
+                  width: 70%;
+                  cursor: pointer;
+                  .milestone_intro{
+                    padding: 1.5%;
+                    background: #916646;
+                    font-size: 1.25rem;
+                    color: #fffdfc;
+                    .milestone_title{
+                      width: 100%;
+                      .display_box;
+                      .boxOverflow(1);
+                    }
+                    .milestone_cta{
+                      padding-top: 1%;
+                      text-align: right;
+                      .cta_btn{
+                        display: inline-block;
+                        padding-right: 7%;
+                      }
+                    }
+                  }
+                }
+                .milestone_time{
+                  width: 30%;
+                  font-size: 0.8rem;
+                  color: #754e42;
+                  text-align: center;
+                  padding-bottom: 1%;
+                  border-bottom: solid 2px #916646;
+                }
+              }
+            }
+            .track_left{
+              width: 49.7%;
+            }
+            .track_line{
+              width: 0.6%;
+              background: #916646;
+            }
+            .track_right{
+              width: 49.7%;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*人物紀實映畫*/
+.character_page{
+  .tab_wrap{
+    margin-top: 0.5%;
+  }
+  .tab_content{
+    width: 57%;
+    margin: 0 auto;
+    margin-top: 2.5%;
+    .tab_content_item{
+      .character_content{
+        margin-bottom: 5%;
+        &:last-child{margin-bottom: 0;}
+        .character_content_title{
+          background: #916646;
+          color: #fffefd;
+          font-size: 1.25rem;
+          padding: 1% 2%;
+        }
+      }
+      .character_content_info{
+        font-size: 1rem;
+        background: #fffcee;
+        padding: 1.5%;
+        color: #161616;
+        line-height: 160%;
+      }
+    }
+  }
+}
+
+/*線上說故事*/
+.video_content{
+  padding: 5% 0;
+  .bg_content_wrap{
+    width: 72%;
+    margin: 0 auto;
+    .single_title_img{
+      width: 7.7rem;
+      margin: 0 auto;
+      margin-top: 7%;
+    }
+    .past_list{
+      margin-top: 4%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      .past_list_item{
+        width: 32%;
+        margin-bottom: 3%;
+        .past_poster_wrap{
+          position: relative;
+          .past_video_time{
+            position: absolute;
+            font-size: 1rem;
+            color: #fff;
+            background: #31302f;
+            padding: 1%;
+            bottom: 4%;
+            right: 0;
+            z-index: 66;
+          }
+        }
+        .past_video_title{
+          padding: 3% 4.5%;
+          background: #916646;
+          font-size: 1.25rem;
+          color: #fffefd;
+          .display_box;
+          .boxOverflow(2);
+        }
+        .past_video_intro{
+          padding: 3% 4.5%;
+          background: #fffcee;
+          .upload_time{
+            font-size: 0.8rem;
+            color: #563f3a;
+          }
+          .past_video_info{
+            font-size: 1rem;
+            line-height: 160%;
+            margin-top: 2.5%;
+            color: #161616;
+            .display_box;
+            .boxOverflow(2);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*最新消息內頁*/
+.news_detail_content{
+  padding: 2% 0;
+  .detail_content_wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 96%;
+    margin: 0 auto;
+    .left_intro{
+      width: 68%;
+      .news_title{
+        font-size: 2rem;
+        color: #563f3a;
+        padding-bottom: 0.6rem;
+        border-bottom: solid 1px #947567;
+      }
+      .news_time{
+        font-size: 0.8rem;
+        color: #563f3a;
+        margin-top: 0.6rem;
+      }
+      .news_content{
+        font-size: 1rem;
+        color: #161616;
+        line-height: 160%;
+        margin-top: 1rem;
+      }
+      .news_img{
+        margin-top: 1rem;
+      }
+    }
+    .right_list{
+      width: 30%;
+      .right_list_item{
+        margin-bottom: 1.5rem;
+        .right_list_title{
+          text-align: center;
+          color: #563f3a;
+          font-size: 1.25rem;
+          padding: 2% 0;
+          background: #f2c768;
+        }
+        .right_list_content{
+          background: #fffcee;
+          width: 100%;
+          .boxForm;
+          padding: 3%;
+          .news_item{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 3.5%;
+            border-bottom: solid 1px #947567;
+            margin-bottom: 4%;
+            &:last-child{
+              margin-bottom: 0;
+              padding-bottom: 0;
+              border-bottom: none;
+            }
+            .news_item_img_cta{
+              width: 35%;
+              .homeNews_img{
+                width: 100%;
+              }
+            }
+            .homeNews_detail{
+              width: 61%;
+              .news_item_title{
+                font-size: 1.25rem;
+                color: #563f3a;
+                line-height: 100%;
+              }
+              .news_item_time{
+                font-size: 0.8rem;
+                color: #563f3a;
+                margin-top: 0.3rem;
+              }
+              .news_item_des{
+                font-size: 1rem;
+                color: #161616;
+                margin-top: 0.3rem;
+                line-height: 120%;
+                .display_box;
+                .boxOverflow(2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*故事介绍*/
+.about_content{
+  padding: 4% 0;
+  .detail_content_wrap{
+    width: 60%;
+    margin: 0 auto;
+    .about_content_detail{
+      margin-top: 3rem;
+      &:first-child{margin-top: 0;}
+      .about_content_title{
+        font-size: 1.5rem;
+        color: #563f3a;
+        padding-bottom: 0.6rem;
+        border-bottom: solid 1px #947567;
+      }
+      .about_content_content{
+        font-size: 1rem;
+        color: #161616;
+        line-height: 160%;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .pc {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .float_content {
+    top: 2rem;
+  }
+
+  .section_cta {
+    .cta_btn {
+     padding-left: .5rem !important;
+     padding-right: 1.5rem !important;
+    }
+  }
+  /*首页*/
+  .nav {
+    font-size: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    &.mobile_nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      .nav_wrap {
+        display: block !important;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 100;
+        background: #fffcee;
+        .nav_list {
+          flex-wrap: wrap;
+          .nav_item {
+            flex-wrap: wrap;
+            margin: 0;
+            width: 100%;
+            border-top: solid 1px #f9f3e2;
+            padding: 3% 0;
+            line-height: 130%;
+            .sub_nav {
+              position: relative;
+              width: 100%;
+              .transform(translate(0, 0));
+              top: 0;
+              left: 0;
+              .sub_nav_item {
+                padding: 0;
+                margin-top: 3%;
+                border: none;
+              }
+            }
+          }
+          .has_sub {
+            background: url("@{imagePath}menu_show.png") no-repeat 95% 1.4rem;
+            background-size: 4%;
+          }
+          .show_sub {
+            background: url("@{imagePath}menu_hide.png") no-repeat 95% 1.4rem;;
+            background-size: 4%;
+          }
+        }
+      }
+    }
+    .logo {
+      width: 22%;
+      padding: 2.5% 2%;
+    }
+    .mobile_menu {
+      width: 2rem;
+      padding-right: 2.5%;
+    }
+  }
+  .mobile_nav_bg {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    background: #916646;
+    opacity: 0.96;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &.active {
+      display: block;
+    }
+  }
+  .footer {
+    padding: 6% 0;
+    .footer_content {
+      margin-bottom: 4%;
+    }
+    .fbicon {
+      margin-top: 6.5%;
+      width: 2.5rem;
+    }
+  }
+  .home_news {
+    width: 100%;
+    position: relative;
+    .home_news_content {
+      width: 72%;
+      .home_news_title {
+        width: 7.5rem;
+      }
+      .news_list {
+        margin-top: 13.5%;
+        .news_item {
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          margin-bottom: 7%;
+          padding-bottom: 0;
+          &:nth-child(2) {
+            border-bottom: none;
+            margin-bottom: 0;
+          }
+          .homeNews_img {
+            width: 100%;
+          }
+          .homeNews_detail {
+            width: 100%;
+            padding-bottom: 6%;
+            font-size: 0.8rem;
+            .news_item_title {
+              width: 100%;
+              .boxForm;
+              font-size: 1rem;
+            }
+            .news_item_time {
+              text-align: center;
+              margin: 2% 0;
+            }
+            .news_item_cta {
+              position: relative;
+              display: block;
+              width: 21%;
+              margin: 0 auto;
+              margin-top: 4%;
+              .transform(translate(0, 0));
+            }
+          }
+        }
+      }
+      .more_news_cta {
+        padding-right: 4%;
+        margin-top: -2%;
+        background-position: 96% center;
+      }
+    }
+  }
+  .home_story {
+    .home_story_content {
+      top: 5%;
+      .home_story_title {
+        width: 7.5rem;
+      }
+    }
+  }
+  .home_museum {
+    background-image: url("@{imagePath}bg_cloth.png"), url("@{imagePath}content_bg_pc.jpg");
+    background-repeat: no-repeat, repeat-y;
+    background-position: right 99%, top center;
+    background-size: 23% auto, 100% auto;
+    height: 106.5rem;
+    .home_museum_content {
+      .home_museum_title {
+        width: 10rem;
+      }
+      .home_museumDetail {
+        margin-top: 6%;
+        .museum_list {
+          width: 83%;
+          flex-direction: column;
+          .museum_item {
+            margin-left: 0;
+            margin-bottom: 2.5%;
+            width: 100%;
+            .boxForm;
+            padding: 5.5% 7%;
+            .museum_item_wrap {
+              .museum_item_profile {
+                .museum_title {
+                  padding: 1% 2%;
+                  font-size: 1rem;
+                }
+              }
+              .museum_des {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .home_live {
+    .home_live_content {
+      width: 92%;
+      .home_live_title {
+        width: 10rem;
+      }
+      .live_wrap {
+        margin: 0 auto;
+        padding-top: 8%;
+        padding-bottom: 7.5%;
+        margin-top: 7%;
+      }
+      .live_history {
+        margin-top: 4%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .home_past_live {
+          width: 31%;
+        }
+        .past_list_wrap {
+          margin-top: 4%;
+          width: 62%;
+          background: url("@{imagePath}home_photobg_mb.png") center center;
+          background-size: 100% 100%;
+          padding: 3.5% 0 9% 0;
+          .past_list {
+            flex-direction: column;
+            justify-content: start;
+            .past_item {
+              width: 77%;
+              margin-bottom: 5%;
+              .live_time {
+
+              }
+            }
+          }
+        }
+      }
+      .view_more_live {
+        position: absolute;
+        left: 50%;
+        bottom: 2%;
+        .transform(translate(-50%, 0))
+      }
+    }
+  }
+
+  /*最新消息列表页*/
+  .tab_wrap {
+    .list_tab {
+      .tab_item {
+        padding: 0.5rem 0.7rem;
+        font-size: 1rem;
+        margin-left: 2.5rem;
+      }
+    }
+  }
+  .list_news {
+    width: 100%;
+    position: relative;
+    .home_news_content {
+      width: 72%;
+      top: 3.5rem;
+      .home_news_title {
+        width: 7.5rem;
+      }
+      .news_list {
+        margin-top: 7.5%;
+        .news_item {
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          margin-bottom: 7%;
+          padding-bottom: 0;
+          &:nth-child(2) {
+            border-bottom: none;
+            margin-bottom: 0;
+          }
+          .news_item_img_cta{
+            width: 100%;
+            .homeNews_img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .homeNews_detail {
+            width: 100%;
+            padding-bottom: 6%;
+            font-size: 0.8rem;
+            .news_item_title {
+              width: 100%;
+              .boxForm;
+              font-size: 1rem;
+            }
+            .news_item_time {
+              text-align: center;
+              margin: 2% 0;
+            }
+            .news_item_cta {
+              position: relative;
+              display: block;
+              width: 21%;
+              margin: 0 auto;
+              margin-top: 4%;
+              .transform(translate(0, 0));
+            }
+          }
+        }
+      }
+      .more_news_cta {
+        padding-right: 4%;
+        margin-top: -2%;
+        background-position: 96% center;
+      }
+    }
+  }
+  .pagination {
+    margin-top: 0 !important;
+  }
+
+  /*傳家寶*/
+  .section_intro {
+    font-size: 0.9rem;
+    line-height: 170%;
+    width: 83.5%;
+    margin: 0 auto;
+    padding: 6% 0;
+  }
+  .heirloom_list {
+    padding-bottom: 8%;
+    .float_content_wrap {
+      .heirloom_list_content {
+        width: 100%;
+        top: 2.5rem;
+        .tab_content {
+          margin-top: 1.5rem;
+          .museum_list {
+            display: none;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            &.active {
+              display: block;
+            }
+            .museum_item {
+              width: 100%;
+              margin-left: 0;
+              float: none;
+              margin-bottom: 2rem;
+              .museum_item_wrap {
+                .museum_item_profile {
+                  .museum_title {
+                    .item_name {
+                      font-size: 1.25rem;
+                    }
+                    .item_time {
+                      font-size: 0.8rem;
+                    }
+                  }
+                }
+                .museum_des {
+                  font-size: 1rem;
+                  background: #fff;
+                }
+              }
+            }
+          }
+        }
+        .section_cta {
+          margin-top: -1.5%;
+        }
+      }
+    }
+  }
+
+  /*傳家寶內頁*/
+  .heirloom_detail_content{
+    padding: 8% 0;
+    .bg_content_wrap{
+      width: 83%;
+      .detail_title{
+        font-size: 1.25rem;
+      }
+      .detail_slogan{
+        padding: 2% 0;
+      }
+      .heirloom_detail_intro{
+        padding-top: 7%;
+      }
+      .border-separate{
+        margin: 6% 0;
+      }
+      .heirloom_more_detail{
+        &.mobile{display: flex;}
+        .more_detail_item{
+          padding-left: 5%;
+          background-size: 1rem;
+        }
+      }
+    }
+  }
+
+  /*花美男*/
+  .glory_list {
+    .float_content_wrap {
+      .float_content {
+        top: 3rem;
+        .tab_content {
+          margin-top: 0 !important;
+          .museum_list {
+            width: 70%;
+            display: block;
+            .museum_item {
+              .museum_item_wrap {
+                .museum_des {
+                  .museum_cta {
+                    right: 0.5rem;
+                    bottom: 0.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*花美男内页*/
+  .glory_detail_content{
+    padding: 8% 0;
+    .bg_content_wrap{
+      width: 85%;
+      .glory_profile_wrap{
+        margin-top: 6%;
+        flex-direction: column;
+        .glory_profile{
+          width: 100%;
+        }
+        .glory_info{
+          width: 100%;
+          margin-top: 5%;
+          .info_title{
+            font-size: 1.25rem;
+          }
+        }
+      }
+      .single_title_img{
+        width: 7.7rem;
+        margin: 0 auto;
+        margin-top: 10%;
+      }
+      .more_item_slide_wrap{
+        margin-top: 6%;
+        .swiper-button-prev{
+          left: 0.5rem;
+        }
+        .swiper-button-next{
+          right: 0.5rem;
+        }
+        --swiper-navigation-size: 1rem;/* 设置按钮大小 */
+      }
+    }
+  }
+  .popup{
+    .poup_content_wrap{
+      width: 85%;
+      height: 75%;
+      .boxForm;
+      padding: 7% 3%;
+      .close{
+        width: 1rem;
+        right: 1%;
+        top: 1%;
+      }
+      .poup_content{
+        padding: 0 3%;
+        .poup_content_title{
+          margin-top: 5%;
+          padding: 1% 3%;
+          font-size: 1.25rem;
+        }
+        .poup_content_resoure{
+          margin: 5% 0;
+        }
+        .border-separate{
+          margin: 5% 0;
+        }
+      }
+    }
+  }
+
+  /*遷臺軌跡*/
+  .track_page {
+    .tab_wrap{
+      .list_tab{
+        .tab_item{
+          margin-left: 1rem;
+          &:nth-child(1){margin-left: 0;}
+        }
+      }
+    }
+    .float_content_wrap {
+      width: 92%;
+      background-image: url("@{imagePath}mobile_paper_01.png"), url("@{imagePath}mobile_paper_03.png"), url("@{imagePath}mobile_paper_02.png");
+      background-repeat:no-repeat, no-repeat,no-repeat;
+      background-position: top center, bottom center,center center;
+      background-size: 100% auto, 100% auto, 100% 90%;
+      padding: 8% 0;
+      .heirloom_list_content {
+        .tab_content {
+          width: 80%;
+          margin: 0 auto;
+          margin-top: 4%;
+          .tab_content_item{
+            .track_icon{
+              width: 10%;
+              margin: 0;
+              &.taiwan{margin-top: -2.5%;}
+            }
+            .track_wrap{
+              width: 100%;
+              height: 48rem;
+              margin-top: -1%;
+              .track_ing{
+                .track_milestone{
+                  .milestone_info{
+                    .milestone_intro{
+                      padding: 3%;
+                      font-size: 1rem;
+                      .milestone_cta{
+                        padding-top: 12%;
+                        text-align: center;
+                        .cta_btn{
+                          padding: 0.1rem 1.5rem 0.1rem 0.5rem;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .track_line{
+                width: 1.5%;
+                background: #916646;
+                margin-left: 4.4%;
+              }
+              .track_right{
+                width: 90%;
+                flex-wrap: wrap;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*人物紀實映畫*/
+  .character_page{
+    .tab_wrap{
+      margin-top: 1.5%;
+    }
+    .tab_content{
+      width: 83.5%;
+      margin-top: 4%;
+      .tab_content_item{
+        .character_content{
+          margin-bottom: 8%;
+          .character_content_title{
+            padding: 1.5% 2%;
+          }
+        }
+        .character_content_info{
+          padding: 2.5%;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  /*線上說故事*/
+  .video_content{
+    padding: 8% 0;
+    padding-bottom: 6%;
+    .bg_content_wrap{
+      width: 83.5%;
+      .single_title_img{
+        margin-top: 10%;
+      }
+      .past_list{
+        margin-top: 6%;
+        .past_list_item{
+          width: 48%;
+          margin-bottom: 6%;
+          .past_poster_wrap{
+            .past_video_time{
+              font-size: 0.8rem;
+            }
+          }
+          .past_video_title{
+            font-size: 1rem;
+          }
+          .past_video_intro{
+            .upload_time{
+              font-size: 0.6rem;
+            }
+            .past_video_info{
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*最新消息內頁*/
+  .news_detail_content{
+    padding: 5% 0;
+    .detail_content_wrap{
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      .left_intro{
+        width: 100%;
+      }
+      .right_list{
+        width: 100%;
+        margin-top: 10%;
+        .right_list_item{
+          .right_list_title{
+            font-size: 1rem;
+          }
+          .right_list_content{
+            .news_item{
+              .homeNews_detail{
+                .news_item_title{
+                  font-size: 1rem;
+                  color: #563f3a;
+                }
+                .news_item_time{
+                  font-size: 0.6rem;
+                }
+                .news_item_des{
+                  font-size: 0.8rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*故事介绍*/
+  .about_content{
+    padding: 8% 0;
+    .detail_content_wrap{
+      width: 85%;
+      .about_content_detail{
+        margin-top: 2rem;
+        .about_content_title{
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
